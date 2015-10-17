@@ -4,8 +4,6 @@ title: FAQ
 permalink: /faq/
 ---
 
-Some information about you!
-
 ### Frequently asked questions
 
 * What is COSMO?
@@ -19,6 +17,6 @@ Some information about you!
 * Do I have to use Csound?
 
 
-### Contact me
+### Contact us 
 
 [csoundonstage@gmail.com](mailto:csoundonstage@gmail.com)
