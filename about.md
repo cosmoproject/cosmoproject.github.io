@@ -4,7 +4,7 @@ title: FAQ
 permalink: /about/
 ---
 
-Some information about you!
+Some information about The COSMO Project!
 
 ### More Information
 
