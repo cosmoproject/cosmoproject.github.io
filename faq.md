@@ -6,12 +6,6 @@ permalink: /faq/
 
 ### Frequently asked questions
 
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-
 
 * **What is the COSMO Project?**
 
@@ -23,16 +17,15 @@ permalink: /faq/
 
 	Approximate components cost:
 
-	| Component     	| Price    | 
-	| ---------------------	|---------:|
-	| Raspberry Pi      	|  400 NOK |
-	| Audio Interface      	|  350 NOK |
-	| Enclosure 		|  150 NOK |
-	| COSMO HAT 		|  300 NOK |
-	| Other components 	|  250 NOK |
-	| Shipping and customs 	|  150 NOK |
-	| ---------------------	|---------:|			
-	| Total component cost 	| 1600 NOK |
+	Component     	   		Price     
+	  * Raspberry Pi      	  	400 NOK 
+	  * Audio Interface		350 NOK 
+	  * Enclosure 		  	150 NOK 
+	  * COSMO HAT 		  	300 NOK 
+	  * Other components 	  	250 NOK 
+	  * Shipping and customs	150 NOK
+
+	Total component cost		1600 NOK
 
 
 * **Do I have to know programming?**
