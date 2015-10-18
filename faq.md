@@ -6,6 +6,13 @@ permalink: /faq/
 
 ### Frequently asked questions
 
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+
 * **What is the COSMO Project?**
 
 	The COSMO (Csound On Stage Musical Operator) project is an open source project providing the software and hardware instructions to build a DIY effect pedal based on the [Raspberry PI](https://www.raspberrypi.org) computer and [Csound](https://csound.com/).
@@ -27,12 +34,6 @@ permalink: /faq/
 	| ---------------------	|---------:|			
 	| Total component cost 	| 1600 NOK |
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
 
 * **Do I have to know programming?**
 
