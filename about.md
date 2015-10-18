@@ -20,7 +20,7 @@ The current design propose a guitar pedal design with regular quarter jack-in an
 
 Do-it-yourself (DIY) build instructions for the pedal-box and a SD-card image with all required software installed and preconfigured, will be provided on the related COSMO project wiki-page. 
 
-We are giving workshops were we assist in building these devices and show how easy it is to design custom audio-effects with [Csound](https://csound.com). This may result in a [Csound](https://csound.com) live-performer community, sharing sound modification [Csound](https://csound.com) patches, developed for such stand alone musical devices [].
+We are giving workshops were we assist in building these devices and show how easy it is to design custom audio-effects with [Csound](https://csound.com). This may result in a [Csound](https://csound.com) live-performer community, sharing sound modification [Csound](https://csound.com) patches, developed for such stand alone musical devices [2].
 
 ### Contact us
 
