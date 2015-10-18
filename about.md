@@ -29,11 +29,11 @@ We are giving workshops were we assist in building these devices and show how ea
 The project is funded by the Arts Council Norway and has been presented at the following international conferences:
 
 [1] Ervik, Kim; Hofmann, Alex, and Waerstad, Bernt I. (2013)
-"COSMO - Csound On Stage Musical Operator (abstract),"
+"COSMO - Csound On Stage Musical Operator,"
 in 2nd International Csound Conference (Boston, US).
 
 [2] Hofmann, Alex and Waerstad, Bernt I. (2015)
-"COSMO 2.0 -Csound on Stage Musical Operator (abstract),"
+"COSMO 2.0 -Csound on Stage Musical Operator,"
 in The 3rd International Csound Conference (St. Petersburg, RU).
 
 
