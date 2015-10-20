@@ -1,12 +1,7 @@
 ---
 layout: post
-title: You're up and running!
+title: COSMO Workshop in November 2015 announced
 ---
-
-Greetings people of Earth!
-
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+The very first COSMO Workshop ever will be held in Trondheim at FIX Makerspace on 28th and 29th of November! Only room for 10 participants - tickets can be bought here: https://mft.hoopla.no/sales/1246830531/
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
