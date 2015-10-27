@@ -26,14 +26,6 @@ The basic cost is the hardware components you need to build the device. These ar
 
 	Total component cost		1600 NOK
 
-### Workshop presenters /  Project Core Developers
-* [Bernt I. Waerstad](https://www.ntnu.no/ansatte/bernt.warstad): Software development, workshop presenter
-* [Alex Hofmann](http://iwk.mdw.ac.at/hofmann.htm): Software development, workshop presenter
-* Christopher Koch: Hardware development, circuit design
-
-Former Members:
-* Kim Ervik: Hardware development
-
 ### Contact us 
 
 Are interested in running a COSMO workshop in your city / institution? 
