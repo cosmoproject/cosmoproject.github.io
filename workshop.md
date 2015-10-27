@@ -28,7 +28,7 @@ The basic cost is the hardware components you need to build the device. These ar
 
 ### Contact us 
 
-Are interested in running a COSMO workshop in your city/insitution? 
+Are interested in running a COSMO workshop in your city / institution? 
 Or do you want information when and where the next COSMO workshop is happening?
 Contact us at:
 
