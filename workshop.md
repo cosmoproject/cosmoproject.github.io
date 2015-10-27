@@ -9,6 +9,7 @@ Currently the workshops are planned for a two-day (each 5 hours) schedule. This 
 
 ### Designs
 The basic design is a guitar pedal with 4 knobs, 2 foot switches and 2 LEDs. However, according to the avialable components or design ideas from the attendencies, the design is up to you. The COSMO-HAT allows to connect up to 8 analog control inputs (knobs or switches) and 8 LEDs. The current design forsees a stereo USB soundcard, but any multichannel USB soundcard running with the raspberry pi is possible to use and would allow to have more audio input/output channels.
+![alt text](/images/COSMO-prototype1-pic2.JPG "basic COSMO designs")
 
 ### Budget 
 
