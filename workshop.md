@@ -16,7 +16,7 @@ The basic cost is the hardware components you need to build the device. These ar
 
 	Approximate components cost:
 
-	Component     	   		Price     
+	Component     	   			Price     
 	  * Raspberry Pi      	  	400 NOK 
 	  * Audio Interface			350 NOK 
 	  * Enclosure 			  	150 NOK 
