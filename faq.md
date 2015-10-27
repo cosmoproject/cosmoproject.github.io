@@ -13,7 +13,7 @@ permalink: /faq/
 
 * **How much does it cost?**
 
-	The basic cost is the hardware components you need to build the device. These are appoximately 1600 NOK (180 E). For a workshop, where we provide the infrastructure the costs are 2300 NOK (250 EUR) per participant. 
+	The basic cost is the hardware components you need to build the device. These are appoximately 1600 NOK (180 EUR). For a workshop, where we provide the infrastructure the costs are 2300 NOK (250 EUR) per participant. 
 
 	Approximate components cost:
 
