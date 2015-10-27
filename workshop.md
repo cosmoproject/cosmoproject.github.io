@@ -18,9 +18,9 @@ The basic cost is the hardware components you need to build the device. These ar
 
 	Component     	   		Price     
 	  * Raspberry Pi      	  	400 NOK 
-	  * Audio Interface		350 NOK 
-	  * Enclosure 		  	150 NOK 
-	  * COSMO HAT 		  	300 NOK 
+	  * Audio Interface			350 NOK 
+	  * Enclosure 			  	150 NOK 
+	  * COSMO HAT 			  	300 NOK 
 	  * Other components 	  	250 NOK 
 	  * Shipping and customs	150 NOK
 
