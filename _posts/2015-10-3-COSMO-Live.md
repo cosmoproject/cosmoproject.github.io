@@ -7,3 +7,4 @@ Bernt I. Waerstad and Alex Hofmann played a COSMO performance live at the 3rd In
 ![cosmobox]({{ site.baseurl }}/images/Live_01.png)
 ![cosmobox]({{ site.baseurl }}/images/Live_02.png)
 ![cosmobox]({{ site.baseurl }}/images/Live_03.png)
+![cosmobox]({{ site.baseurl }}/images/Live_04.png)
