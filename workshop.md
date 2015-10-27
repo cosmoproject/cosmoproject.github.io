@@ -12,9 +12,24 @@ The basic design is a guitar pedal with 4 knobs, 2 foot buttons and 2 LEDs. Howe
 
 ### Budget 
 
+The basic cost is the hardware components you need to build the device. These are appoximately 1600 NOK (180 E). For a workshop, where we provide the infrastructure the costs are 2300 NOK (250 EUR) per participant. 
+
+	Approximate components cost:
+
+	Component     	   		Price     
+	  * Raspberry Pi      	  	400 NOK 
+	  * Audio Interface		350 NOK 
+	  * Enclosure 		  	150 NOK 
+	  * COSMO HAT 		  	300 NOK 
+	  * Other components 	  	250 NOK 
+	  * Shipping and customs	150 NOK
+
+	Total component cost		1600 NOK
 
 ### Contact us 
 
-If you are interested in organizing a COSMO workshop? Contact us at 
+Are interested in running a COSMO workshop in your city/insitution? 
+Or do you want information when and where the next COSMO workshop is happening?
+Contact us at:
 
 [csoundonstage@gmail.com](mailto:csoundonstage@gmail.com)
