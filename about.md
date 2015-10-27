@@ -7,6 +7,8 @@ permalink: /about/
 
 The COSMO (Csound On Stage Musical Operator) project is an open source project providing the software and hardware instructions to make a DIY effect pedal based on the [Raspberry PI](https://www.raspberrypi.org) computer and [Csound](https://csound.com).
 
+![alt text](/images/Live_01.JPG "Live")
+
 ### Background
 
 [Csound](https://csound.com) is a powerful, multi-platform, real-time sound-processing environment that allows musicians to design their own instruments and audio-effects by writing a few lines of [Csound](https://csound.com) code. The initial aim of the “Csound On Stage Music Operator” (COSMO) project was to run [Csound 6](https://csound.com) on a standalone musical device especially designed for live performance [1].
