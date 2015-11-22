@@ -17,17 +17,15 @@ permalink: /faq/
 
     Approximate components cost:
 
-    Component     	   			Price   
-
-        * Raspberry Pi          400 NOK 
-        * Audio Interface       350 NOK 
-        * Enclosure             150 NOK 
-        * COSMO HAT             300 NOK 
-        * Other components      250 NOK 
-        * Shipping and customs  150 NOK
+    Component                   Price     
+      * Raspberry Pi            400 NOK 
+      * Audio Interface         350 NOK 
+      * Enclosure               150 NOK 
+      * COSMO HAT               300 NOK 
+      * Other components        250 NOK 
+      * Shipping and customs    150 NOK
 
     Total component cost        1600 NOK
-
 
 * **Do I have to know programming?**
 
