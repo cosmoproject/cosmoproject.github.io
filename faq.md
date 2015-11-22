@@ -15,17 +15,17 @@ permalink: /faq/
 
 	The basic cost is the hardware components you need to build the device. These are appoximately 1600 NOK (180 EUR). For a workshop, where we provide the infrastructure the costs are 2300 NOK (250 EUR) per participant. 
 
-	Approximate components cost:
+    Approximate components cost:
 
-	Component     	   		Price     
-	  * Raspberry Pi      	  	400 NOK 
-	  * Audio Interface		350 NOK 
-	  * Enclosure 		  	150 NOK 
-	  * COSMO HAT 		  	300 NOK 
-	  * Other components 	  	250 NOK 
-	  * Shipping and customs	150 NOK
+    Component     	   			Price     
+        * Raspberry Pi          400 NOK 
+        * Audio Interface       350 NOK 
+        * Enclosure             150 NOK 
+        * COSMO HAT             300 NOK 
+        * Other components      250 NOK 
+        * Shipping and customs  150 NOK
 
-	Total component cost		1600 NOK
+    Total component cost        1600 NOK
 
 
 * **Do I have to know programming?**

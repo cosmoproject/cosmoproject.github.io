@@ -3,7 +3,9 @@ layout: page
 title: Workshop
 permalink: /workshop/
 ---
-.. news: the next workshop is on 28th and 29th of November at FIX Makerspace in Trondheim (NO). More details [here]({% post_url 2015-10-7-COSMO_Workshop_Trondeim %}).
+
+### Latest news!
+The next workshop is on 28th and 29th of November at FIX Makerspace in Trondheim (NO). More details [here]({% post_url 2015-10-7-COSMO_Workshop_Trondeim %}).
 
 ### Workshop description
 Currently the workshops are planned for a two-day (each 5 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.

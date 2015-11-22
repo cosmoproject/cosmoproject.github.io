@@ -11,7 +11,7 @@ The COSMO (Csound On Stage Musical Operator) project is an open source project p
 
 ### Background
 
-[Csound](https://csound.com) is a powerful, multi-platform, real-time sound-processing environment that allows musicians to design their own instruments and audio-effects by writing a few lines of [Csound](https://csound.com) code. The initial aim of the “Csound On Stage Music Operator” (COSMO) project was to run [Csound 6](https://csound.com) on a standalone musical device especially designed for live performance [1].
+[Csound](https://csound.com) is a powerful, multi-platform, real-time sound-processing environment that allows musicians to design their own instruments and audio-effects by writing a few lines of [Csound](https://csound.com) code. The initial aim of the “Csound On Stage Music Operator” (COSMO) project was to run [Csound 6](https://csound.com) on a standalone musical device specifically designed for live performance [1].
 
 ![alt text](/images/3_COSMO_designs.JPG "3 different COSMO designs")
 
@@ -29,6 +29,7 @@ Additionally, we are giving [workshops](http://cosmoproject.github.io/workshop) 
 * [Kristoffer Koch](http://www.kristofferkoch.com): Hardware development, circuit design
 
 Former Members:
+
 * Kim Ervik: Hardware development
 
 ### Contact us
