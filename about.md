@@ -24,9 +24,9 @@ Do-it-yourself (DIY) build instructions for the pedal-box and a SD-card image wi
 Additionally, we are giving [workshops](http://cosmoproject.github.io/workshop) were we assist in building these devices and show how easy it is to design custom audio-effects with [Csound](https://csound.com). This may result in a [Csound](https://csound.com) live-performer community, sharing sound modification [Csound](https://csound.com) patches, developed for such stand alone musical devices [2].
 
 ### Project Core Developers
-* [Bernt I. Waerstad](https://www.ntnu.no/ansatte/bernt.warstad): Software development, workshop presenter
+* [Bernt Isak Wærstad](https://www.ntnu.no/ansatte/bernt.warstad): Software development, workshop presenter
 * [Alex Hofmann](http://iwk.mdw.ac.at/hofmann.htm): Software development, workshop presenter
-* Christopher Koch: Hardware development, circuit design
+* [Kristoffer Koch](http://www.kristofferkoch.com): Hardware development, circuit design
 
 Former Members:
 * Kim Ervik: Hardware development
