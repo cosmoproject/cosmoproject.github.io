@@ -21,6 +21,7 @@ More instructions coming soon..
 - Use a voltmeter to test from the out(-) of the converter circuit to the input, you should see the 9V
 - measure the output of the converter, which will be 9V or lower
 - use a screwdriver to adjust the screw on the circuit until you measure 5V output
+![alt text](/images/instructions/2b_VoltageConverterAdjust.png)
 - solder the red (+) and the black (-) leads of a micro USB-cable to the output of the converter.
 
 
