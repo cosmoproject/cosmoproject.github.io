@@ -39,6 +39,7 @@ More instructions coming soon..
 - turn off the RPI by unplugging the mini usb power
 
 ##3. Prepare the COSMO-HAT 
+![alt text](/images/instructions/3_COSMORaw.jpg)
 - solder the 40 Pin connector to the COSMO Hat
 - solder the rainbow cable to the analog input channels (brown = 0)
 - solder the rainbow cable to the digital input/output channels (brown = 0)
