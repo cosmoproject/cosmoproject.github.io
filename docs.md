@@ -14,10 +14,10 @@ More instructions coming soon..
 
 ##1. Power Supply Unit
 - Solder 9V connector to the In (- ground; +) of the MH-MINI-360 converter
-![cosmobox]({{ site.baseurl }}/images/instructions/1_VoltageConverter.jng)
+![cosmobox]({{ site.baseurl }}/images/instructions/1_VoltageConverter.png)
 - Negative is center on guitar equipment
 - connect 9V power supply to the connector
-![cosmobox]({{ site.baseurl }}/images/instructions/2_VoltageConverterCable.jng)
+![cosmobox]({{ site.baseurl }}/images/instructions/2_VoltageConverterCable.png)
 - Use a voltmeter to test from the out(-) of the converter circuit to the input, you should see the 9V
 - measure the output of the converter, which will be 9V or lower
 - use a screwdriver to adjust the screw on the circuit until you measure 5V output
