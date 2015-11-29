@@ -27,11 +27,10 @@ More instructions coming soon..
 ##2. Setting up the Raspberry Pi
 - copy our (insert LINK here!) Raspian Image to a 4GB micro SD card
 - connect the micro USB from the power converter cable to the Raspberry Pi 2 (RPI), it should boot up
-
 - connect the RPI to your computer via Ethernet connection
 - open the terminal/console on your mac or linux computer
-- find the RPI networkadress "arp -an" 
-- login: ssh pi@169.254.38.74 (ssh pi@raspberrypi.local)
+- find the RPI network adress: "arp -an" 
+- login: "ssh pi@169.254.38.74 (ssh pi@raspberrypi.local)"
 - pw: raspberry
 - test csound: "cd cosmo-dsp/WorkshopTestFiles/"
 - run: "csound audio-out-test.csd"
