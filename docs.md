@@ -15,14 +15,14 @@ More instructions coming soon..
 ##1. Power Supply Unit
 - Solder 9V connector to the In (- ground; +) of the MH-MINI-360 converter
 ![alt text](/images/instructions/1_VoltageConverter.png)
-- Negative is center on guitar equipment
+- Negative is center on guitar equipment!
 - connect 9V power supply to the connector
-![alt text](/images/instructions/2_VoltageConverterCable.png)
 - Use a voltmeter to test from the out(-) of the converter circuit to the input, you should see the 9V
 - measure the output of the converter, which will be 9V or lower
 - use a screwdriver to adjust the screw on the circuit until you measure 5V output
 ![alt text](/images/instructions/2b_VoltageConverterAdjust.png)
 - solder the red (+) and the black (-) leads of a micro USB-cable to the output of the converter.
+![alt text](/images/instructions/2_VoltageConverterCable.png)
 
 
 ##2. Setting up the Raspberry Pi
@@ -41,6 +41,7 @@ More instructions coming soon..
 
 ##3. Prepare the COSMO-HAT 
 ![alt text](/images/instructions/3_COSMORaw.jpg)
+
 - solder the 40 Pin connector to the COSMO Hat
 - solder the rainbow cable to the analog input channels (brown = 0)
 - solder the rainbow cable to the digital input/output channels (brown = 0)
@@ -53,3 +54,24 @@ More instructions coming soon..
 - log into RPI using SSH (Step 2)
 - run: ~/cosmohat-fw $ make fuse
 
+##5. Drill holes into the enclosure
+
+- Measures of holes to drill for components
+Stompswitch = 12mm
+MainStereoPotentiometer = 8mm
+LED = 8mm
+SwitchOnOff = 4mm
+JackInOut = 10mm
+
+##6. Prepare USB and Ethernet connections
+
+
+##7. Fit everything into the enclosure
+- Mount knobs and switches
+- solder connections to the COSMO-Hat (Photo with description of Pins, Middle = AD, Left = GND, Right = 3.3V)
+- Connect USB-Soundcard to RPI
+- Connect Soundcard In- and Outputs to Jack connectors in the enclosure
+
+
+##8. Crossmixer Board
+- Future..
