@@ -206,8 +206,9 @@ img {
 */
 
 .site-info {
-  float: center;
-
+  //float: center;
+  margin: auto;
+  
   @include mobile {
     float: none;
     display: block;
