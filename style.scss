@@ -206,9 +206,6 @@ img {
 */
 
 .site-info {
-  //float: center;
-  margin: auto;
-  
   @include mobile {
     float: none;
     display: block;
@@ -217,8 +214,8 @@ img {
 }
 
 .site-name {
-  margin: auto;
-  width: 60%;
+  margin: 0 auto;
+  display: table;
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
@@ -228,9 +225,11 @@ img {
 }
 
 .site-description {
-  margin: auto; //-5px 0 0 0;
+  margin: 0, auto; //-5px 0 0 0;
+  display: table;
   color: $gray;
-  font-size: 16px;
+  font-size: 17.2px;
+  font-family: $helveticaNeue;
 
   @include mobile {
     margin: 3px 0;
