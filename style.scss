@@ -206,7 +206,7 @@ img {
 */
 
 .site-info {
-  float: left;
+  float: center;
 
   @include mobile {
     float: none;
