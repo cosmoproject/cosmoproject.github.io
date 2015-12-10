@@ -8,7 +8,7 @@ permalink: /workshop/
 The next workshop is on 28th and 29th of November at FIX Makerspace in Trondheim (NO). More details [here]({% post_url 2015-10-7-COSMO_Workshop_Trondeim %}).
 
 ### Workshop description
-Currently the workshops are planned for a two-day (each 5 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.
+Currently the workshops are planned for a two-day (each 6 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.
 
 ### Designs
 The basic design is a guitar pedal with 5 knobs, 3 foot switches and 4 LEDs. However, according to the avialable components or design ideas from the attendencies, the design is up to you. The COSMO-HAT allows to connect up to 8 analog control inputs (knobs or switches) and 8 LEDs. The current design forsees a stereo USB soundcard, but any multichannel USB soundcard running with the raspberry pi is possible to use and would allow to have more audio input/output channels.
