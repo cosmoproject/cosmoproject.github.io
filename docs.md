@@ -116,11 +116,14 @@ The two first files includes the code for reading the knobs, switches and leds. 
 ```
 aL, aR ins
 ```
+
 This is the code for getting audio into Csound. "ins" is a Csound opcode (a native Csound module) which ouputs the incoming audio into the audio rate variables "aL" and "aR"
+
 
 ```
 ; Reverb arguments: decay, cutoff, mix
 aL, aR Reverb aL, aR, gkpot0, gkpot1, gkswitch0
+
 ```
 
 Reverb is a UDO (User Defined Opcode) which takes a stereo input signal with 3 arguments (decay, cutoff and mix) and applies reverberation to the signal. The ouput is also a stereo signal. Notice that "aL" and "aR" are used on both right and left side of "Reverb"; this means that we first send the dry signal into the reverb effect and then overwrite the dry signal with the reverberant signal. This way makes it very easy to switch the order of effects without changing any code - you simply just reorder by switching lines.
