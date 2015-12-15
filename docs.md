@@ -77,7 +77,7 @@ JackInOut = 10mm
 - Future..
 
 
-## Basic Csound on COSMO
+## <a name="basic-csound">Basic Csound on COSMO</a>
 
 On the COSMO box, we use a python script to hanlde both Csound and the data from the microcontroller (switches, leds and knobs). For the time being this script is called "csndPython_SPI_test.py" and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. This python file runs when the COSMO boots and is where you change which Csound file (has the ending "csd") you want to use. To change the csd file, you need to change the variable called "csoundFile" (at the beginning of the python script) which has a string that points to a specific csd file:
 
