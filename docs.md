@@ -117,13 +117,15 @@ The two first files includes the code for reading the knobs, switches and leds. 
 aL, aR ins
 ```
 This is the code for getting audio into Csound. "ins" is a Csound opcode (a native Csound module) which ouputs the incoming audio into the audio rate variables "aL" and "aR"
+
 ```
 ; Reverb arguments: decay, cutoff, mix
 aL, aR Reverb aL, aR, gkpot0, gkpot1, gkswitch0
 ```
+
 Reverb is a UDO (User Defined Opcode) which takes a stereo input signal with 3 arguments (decay, cutoff and mix) and applies reverberation to the signal. The ouput is also a stereo signal. Notice that "aL" and "aR" are used on both right and left side of "Reverb"; this means that we first send the dry signal into the reverb effect and then overwrite the dry signal with the reverberant signal. This way makes it very easy to switch the order of effects without changing any code - you simply just reorder by switching lines.
 
-    The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1). 
+The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1). 
     
 ```
 ; Lowpass_Stereo arguments: cutoff, resonance
@@ -137,7 +139,9 @@ outs aL, aR
 ```
 The audio coming out from the lowpass filter are sent to the "outs" opcode which sends the audio to the actual hardware device (sound card).
 
-This example was made to be as simple and clear as possible. To see a bit more advanced example which illustrates how you can achieve more flexible routing like sending to different effects in parallell, see the files "ExampleSetup.csd". A basic understanding of Csound is highly recommended before getting too experimental. The FLOSS manual is an excellent resource for learning Csound: [http://floss.booktype.pro/csound/preface/](http://floss.booktype.pro/csound/preface/)
+This example was made to be as simple and clear as possible. To see a bit more advanced example which illustrates how you can achieve more flexible routing like sending to different effects in parallell, see the files "ExampleSetup.csd". 
+
+A basic understanding of Csound is highly recommended before getting too experimental. The FLOSS manual is an excellent resource for learning Csound: [http://floss.booktype.pro/csound/preface/](http://floss.booktype.pro/csound/preface/)
 
 
 
