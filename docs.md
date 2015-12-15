@@ -80,15 +80,19 @@ JackInOut = 10mm
 ## Basic Csound on COSMO
 
 On the COSMO box, we use a python script to hanlde both Csound and the data from the microcontroller (switches, leds and knobs). For the time being this script is called "csndPython_SPI_test.py" and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. This python file runs when the COSMO boots and is where you change which Csound file (has the ending "csd") you want to use. To change the csd file, you need to change the variable called "csoundFile" (at the beginning of the python script) which has a string that points to a specific csd file:
-```
-    csoundFile = "/home/pi/cosmo-dsp/WorkshopTestFiles/knob-test.csd"
+
 ```
 
-    As the path indicates, the Csound files are placed in a separate folder which is a clone of the [cosmo-dsp](https://github.com/cosmoproject/cosmo-dsp)-repository. At the moment we have to folders:
-        * WorkshopTestFiles
+csoundFile = "/home/pi/cosmo-dsp/WorkshopTestFiles/knob-test.csd"
+
+```
+
+As the path indicates, the Csound files are placed in a separate folder which is a clone of the [cosmo-dsp](https://github.com/cosmoproject/cosmo-dsp)-repository. At the moment we have to folders:
+
+- WorkshopTestFiles
         This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
 
-        *Effects
+- Effects
         We have tried to make a as simple as possible solution for those unfamiliar with Csound to be able to patch different effects together. The separate effects are placed in the folder called "UDOs" (UDO stands for User Defined Opcode) and the file "SimpleSetup.csd" shows the basics to combine the effects and map the controllers onto the effect parameters:
 
 ```
