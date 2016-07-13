@@ -205,7 +205,7 @@ img {
 }
 */
 
-/*
+
 .site-info {
   @include mobile {
     float: none;
@@ -221,7 +221,7 @@ img {
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 2px; //28px
   letter-spacing: 1px;
 }
 
@@ -229,14 +229,14 @@ img {
   margin: 0 auto; //-5px 0 0 0;
   display: table;
   color: $gray;
-  font-size: 17.2px;
+  font-size: 2px;//17.2px;
   font-family: $helveticaNeue;
 
   @include mobile {
     margin: 3px 0;
   }
 }
-*/
+
 
 nav {
   float: left;
