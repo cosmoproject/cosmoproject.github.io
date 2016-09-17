@@ -6,5 +6,5 @@ Alex Hofmann and Bernt Isak Wærstad did a live performance with saxophone, guit
 
 [https://www.youtube.com/watch?v=b8WX4wfjVVY](https://www.youtube.com/watch?v=b8WX4wfjVVY)
 
-[https://www.youtube.com/watch?v=b8WX4wfjVVY]![Concert preparations]({{ site.baseurl }}/images/NIME2016/KitchenTableSetup.jpg)
+![Concert preparations]({{ site.baseurl }}/images/NIME2016/KitchenTableSetup.jpg)
 

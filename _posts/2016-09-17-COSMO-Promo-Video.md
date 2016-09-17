@@ -6,5 +6,5 @@ With the help of the amazing Koka Nikoladze ([http://nikoladze.eu/](nikoladze.eu
 
 Watch it here: [https://vimeo.com/183101272](https://vimeo.com/183101272)
 
-[https://vimeo.com/183101272]({{ site.baseurl }}/images/VimeoVideo-screenshot.png)
+![https://vimeo.com/183101272]({{ site.baseurl }}/images/VimeoVideo-screenshot.png)
 
