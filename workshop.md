@@ -5,7 +5,7 @@ permalink: /workshop/
 ---
 
 ### Latest news!
-The next workshops are taking place at Bitraf in Oslo (NO) on the 29th and 30th of October and at BEK in Bergen (NO) on the 12th and 13th of October. More details to come.
+The next workshops are taking place at Bitraf in Oslo (NO) on the 29th and 30th of October and at BEK in Bergen (NO) on the 12th and 13th of November. More details to come.
 
 ### Workshop description
 Currently the workshops are planned for a two-day (each 6 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.
