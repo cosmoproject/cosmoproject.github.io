@@ -63,17 +63,14 @@ LED = 8mm
 SwitchOnOff = 4mm
 JackInOut = 10mm
 
-## 6. Prepare USB and Ethernet connections
-
-
-## 7. Fit everything into the enclosure
+## 6. Fit everything into the enclosure
 - Mount knobs and switches
 - solder connections to the COSMO-Hat (Photo with description of Pins, Middle = AD, Left = GND, Right = 3.3V)
 - Connect USB-Soundcard to RPI
 - Connect Soundcard In- and Outputs to Jack connectors in the enclosure
 
 
-## 8. Crossmixer Board
+## 7. Crossmixer Board
 - Future..
 
 
