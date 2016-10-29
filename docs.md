@@ -12,7 +12,7 @@ More instructions coming soon..
 
 ### Building instructions
 
-##1. Power Supply Unit
+## 1. Power Supply Unit
 - Solder 9V connector to the In (- ground; +) of the MH-MINI-360 converter
 ![alt text](/images/instructions/1_VoltageConverter.png)
 - Negative is center on guitar equipment!
@@ -25,7 +25,7 @@ More instructions coming soon..
 ![alt text](/images/instructions/2_VoltageConverterCable.png)
 
 
-##2. Setting up the Raspberry Pi
+## 2. Setting up the Raspberry Pi
 - copy our (insert LINK here!) Raspian Image to a 4GB micro SD card
 - connect the micro USB from the power converter cable to the Raspberry Pi 2 (RPI), it should boot up
 - connect the RPI to your computer via Ethernet connection
@@ -39,7 +39,7 @@ More instructions coming soon..
 - run: "logout"
 - turn off the RPI by unplugging the mini usb power
 
-##3. Prepare the COSMO-HAT 
+## 3. Prepare the COSMO-HAT 
 ![alt text](/images/instructions/3_COSMORaw.jpg)
 
 - solder the 40 Pin connector to the COSMO Hat
