@@ -49,12 +49,12 @@ More instructions coming soon..
 
 
 
-##4. Setup RPI with COSMO-HAT
+## 4. Setup RPI with COSMO-HAT
 - attach the COSMO Hat to the RPI (no power!)
 - log into RPI using SSH (Step 2)
 - run: ~/cosmohat-fw $ make fuse
 
-##5. Drill holes into the enclosure
+## 5. Drill holes into the enclosure
 
 - Measures of holes to drill for components
 Stompswitch = 12mm
@@ -63,17 +63,17 @@ LED = 8mm
 SwitchOnOff = 4mm
 JackInOut = 10mm
 
-##6. Prepare USB and Ethernet connections
+## 6. Prepare USB and Ethernet connections
 
 
-##7. Fit everything into the enclosure
+## 7. Fit everything into the enclosure
 - Mount knobs and switches
 - solder connections to the COSMO-Hat (Photo with description of Pins, Middle = AD, Left = GND, Right = 3.3V)
 - Connect USB-Soundcard to RPI
 - Connect Soundcard In- and Outputs to Jack connectors in the enclosure
 
 
-##8. Crossmixer Board
+## 8. Crossmixer Board
 - Future..
 
 
