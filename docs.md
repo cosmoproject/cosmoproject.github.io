@@ -42,19 +42,19 @@ More instructions coming soon..
 
 - Measures of holes to drill for components
 
-* Stomp Switch = 12mm 
-![alt text](/images/instructions/components/stomp_switch.jpg)
-* Stereo Potentiometer = 7mm
+* Stomp Switch : 12mm 
+![alt text](/images/instructions/components/stomp_switch.jpg width="150")
+* Stereo Potentiometer : 7mm
 ![alt text](/images/instructions/components/stereo_pot.jpg)
-* Mono Potentiometer
+* Mono Potentiometer : 7mm
 ![alt text](/images/instructions/components/pot.jpg)
-* 5mm LED = 8mm
+* 5mm LED : 8mm
 ![alt text](/images/instructions/components/led_5mm.jpg)
-* Toggle Switch = 6mm
+* Toggle Switch : 6mm
 ![alt text](/images/instructions/components/toggle_switch.jpg)
-* Small Push Button = 7mm
+* Small Push Button : 7mm
 ![alt text](/images/instructions/components/small_push_button.jpg)
-* 6.35mm Jack (in/out)  = 9mm
+* 6.35mm Jack (in/out)  : 9mm
 ![alt text](/images/instructions/components/jack_635mm.jpg)
 
 ## 4. Test COSMO plank
