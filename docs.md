@@ -26,52 +26,50 @@ More instructions coming soon..
 
 
 ## 2. Setting up the Raspberry Pi
-- copy our (insert LINK here!) Raspian Image to a 4GB micro SD card
-- connect the micro USB from the power converter cable to the Raspberry Pi 2 (RPI), it should boot up
-- connect the RPI to your computer via Ethernet connection
-- open the terminal/console on your mac or linux computer
-- find the RPI network adress: "arp -an" 
-- login: "ssh pi@169.254.38.74" (ssh pi@raspberrypi.local)
-- pw: raspberry
-- test csound: "cd cosmo-dsp/WorkshopTestFiles/"
-- run: "csound audio-out-test.csd"
-- press Cmd+C to stop Csound
-- run: "logout"
-- turn off the RPI by unplugging the mini usb power
+- Copy our [Raspian Image]((https://drive.google.com/file/d/0B-Iu7KEexnCpOTk2N0RoY2hiaHM/view?usp=sharing) to a 8GB micro SD card 
+- Connect the micro USB from the power converter cable to the Raspberry Pi 3 (RPI), it should boot up
+- Connect the RPI to your computer via Ethernet connection
+- Open the terminal/console on your mac or linux computer (Windows users should use [Putty](http://www.putty.org/)) 
+- Login: "ssh pi@cosmo1.local" (if "cosmo1.local" doesn't work, try pinging "cosmo1.local" to get the IP address and then use the same command, but with IP address instead of "cosmo1.local") 
+- Password: raspberry
+- Test csound: "cd cosmo-dsp/WorkshopTestFiles/"
+- Run: "csound audio-out-test.csd"
+- Press Ctrl+C to stop Csound
+- Run: "logout"
+- Turn off the RPI by unplugging the mini usb power
 
-## 3. Prepare the COSMO-HAT 
-![alt text](/images/instructions/3_COSMORaw.jpg)
-
-- solder the 40 Pin connector to the COSMO Hat
-- solder the rainbow cable to the analog input channels (brown = 0)
-- solder the rainbow cable to the digital input/output channels (brown = 0)
-- solder middle of potentiometers to analog ins, or tip of jack connectors
-
-
-
-## 4. Setup RPI with COSMO-HAT
-- attach the COSMO Hat to the RPI (no power!)
-- log into RPI using SSH (Step 2)
-- run: ~/cosmohat-fw $ make fuse
-
-## 5. Drill holes into the enclosure
+## 3. Drill holes into the enclosure
 
 - Measures of holes to drill for components
-Stompswitch = 12mm
-MainStereoPotentiometer = 8mm
-LED = 8mm
-SwitchOnOff = 4mm
-JackInOut = 10mm
 
-## 6. Fit everything into the enclosure
+* Stomp Switch = 12mm 
+![alt text](/images/instructions/components/stomp_switch.jpg)
+* Stereo Potentiometer = 7mm
+![alt text](/images/instructions/components/stereo_pot.jpg)
+* Mono Potentiometer
+![alt text](/images/instructions/components/pot.jpg)
+* 5mm LED = 8mm
+![alt text](/images/instructions/components/led_5mm.jpg)
+* Toggle Switch = 6mm
+![alt text](/images/instructions/components/toggle_switch.jpg)
+* Small Push Button = 7mm
+![alt text](/images/instructions/components/small_push_button.jpg)
+* 6.35mm Jack (in/out)  = 9mm
+![alt text](/images/instructions/components/jack_635mm.jpg)
+
+## 4. Test COSMO plank
+
+- Coming...
+
+## 5. Fit everything into the enclosure
 - Mount knobs and switches
-- solder connections to the COSMO-Hat (Photo with description of Pins, Middle = AD, Left = GND, Right = 3.3V)
-- Connect USB-Soundcard to RPI
+- Solder connections to the COSMO plank
+- Connect USB-Soundcard or Cirrus Audio Logic HAT to RPI
 - Connect Soundcard In- and Outputs to Jack connectors in the enclosure
 
 
-## 7. Crossmixer Board
-- Future..
+## 6. Crossmixer Board
+- Coming...
 
 
 ## <a name="csound"></a>Basic Csound on COSMO
