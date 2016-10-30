@@ -43,7 +43,7 @@ More instructions coming soon..
 - Measures of holes to drill for components
 
 * Stomp Switch = 12mm 
-![alt text](/images/instructions/components/stomp_switch.jpg =250x)
+![alt text](/images/instructions/components/stomp_switch.jpg)
 * Stereo Potentiometer = 7mm
 ![alt text](/images/instructions/components/stereo_pot.jpg)
 * Mono Potentiometer
