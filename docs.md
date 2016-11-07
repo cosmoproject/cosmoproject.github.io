@@ -72,7 +72,7 @@ More instructions coming soon..
 
 ## <a name="csound"></a>Basic Csound on COSMO
 
-On the COSMO box, we use a python script to hanlde both Csound and the data from the microcontroller (switches, leds and knobs). For the time being this script is called **csndPython\_SPI\_test.py** and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. This python file runs when the COSMO boots and is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **csoundFile** (at the beginning of the python script) which has a string that points to a specific csd file:
+On the COSMO box, we use a python script to hanlde both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **cosmo.py** and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. On our Raspbian image, this python file is called from the script **startup.sh**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **csoundFile** in **startup.sh** which has a string that points to a specific csd file:
 
 ```
 
