@@ -6,6 +6,18 @@ permalink: /docs/
 
 <!--COSMO is based on our COSMO-HAT circuit. The C-HAT allows to connect up to 8 analog control inputs (sensors, expression pedals etc.), as well as an array of 8 LEDs. The C-HAT furthermore, supports a MIDI-In and MIDI-Out connection, which makes the COSMO device more flexible for applications like a standalone Csound based synthesizer or for interactive sound installations.-->
 
+
+
+
+Required Preparation Steps:
+1. Soldering the Power Converter from 9V to 5V (one for each box)
+2. Soldering OpAmps on the Cross Mixer Board (2 for each box)
+3. Soldering Cables to a) Jack Sockets; b) Potentiometers; c) Stomp Switches (approx 4-5 each per box)
+4. Soldering Cables to Mini-Jack/Chinch connectors (2x for each box) and Dry/Wet Potentiometer
+5. Finalize Cross Mixer Boards, by attaching to each: Jack-In/Out; (4x) Mini-Jack(or Chinch) I/O (2x); Dry/Wet Potentiometer (1x), True Bypass FootSwitch (1x)
+4. Soldering Cosmo Plank connection to a) GPIO header (of RPI for Wooden Design) or b) to Extension Pins of Cirrus Logic Card (for Metal Box Design)
+
+
 More instructions coming soon..
 
 ### Building instructions
