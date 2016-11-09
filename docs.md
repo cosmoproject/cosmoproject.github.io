@@ -36,7 +36,7 @@ More instructions coming soon..
 
 
 ## 2. Setting up the Raspberry Pi
-- Copy our [Raspian Image]((https://drive.google.com/file/d/0B-Iu7KEexnCpOTk2N0RoY2hiaHM/view?usp=sharing) to a 8GB micro SD card 
+- Copy our [Raspian Image](https://drive.google.com/file/d/0B-Iu7KEexnCpOTk2N0RoY2hiaHM/view?usp=sharing) to a 8GB micro SD card 
 - Connect the micro USB from the power converter cable to the Raspberry Pi 3 (RPI), it should boot up
 - Connect the RPI to your computer via Ethernet connection
 - Open the terminal/console on your mac or linux computer (Windows users should use [Putty](http://www.putty.org/)) 
@@ -53,7 +53,7 @@ More instructions coming soon..
 - Measures of holes to drill for components
 
 * Stomp Switch : 12mm 
-![alt text](/images/instructions/components/stomp_switch.jpg width="150")
+![alt text](/images/instructions/components/stomp_switch.jpg)
 * Stereo Potentiometer : 7mm
 ![alt text](/images/instructions/components/stereo_pot.jpg)
 * Mono Potentiometer : 7mm
