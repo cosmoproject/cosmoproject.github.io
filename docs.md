@@ -9,7 +9,7 @@ permalink: /docs/
 
 
 
-Required Preparation Steps:
+## Required Preparation Steps / First Tasks in Workshop :
 - 1. Soldering the Power Converter from 9V to 5V (one for each box)
 - 2. Soldering OpAmps on the Cross Mixer Board (2 for each box)
 - 3. Soldering Cables to a) Jack Sockets; b) Potentiometers; c) Stomp Switches (approx 4-5 each per box)
