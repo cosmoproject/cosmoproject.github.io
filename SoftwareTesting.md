@@ -22,6 +22,7 @@ How to log in to the Raspberry Pi:
 	Windows:
 
 How to change the network name of your COSMO:
+
 	1. Log in to the Raspberry Pi
 	2. Run raspi-config
 	3. Go to...
@@ -37,6 +38,7 @@ To test the COSMO plank:
 	5. All leds will blink in a binary counting pattern and you will see the values for all pots and switches when you twist and push them
 
 To test audio output from Csound:
+
 	1. Connect speakers or headphones to the output of the COSMO 
 	2. Log in to the Raspberry Pi 
 	3. Kill any running instances of python/csound by typing "killall python" 3 times
@@ -48,6 +50,7 @@ To test audio output from Csound:
 	9. Press "Ctrl-C" (possibly twice) to stop Csound
 
 To test audio input to Csound:
+
 	1. Connect an audio source to the input of the COSMO
 	2. Connect speakers or headphones to the output of the COSMO 
 	3. Log in to the Raspberry Pi 
@@ -59,16 +62,19 @@ To test audio input to Csound:
 	9. The audio coming in to the COSMO input should now be passed through Csound and out to the COSMO output. The RMS amplitude value of the input is printed in the console
 	10. Press "Ctrl-C" (possibly twice) to stop Csound
 
-Update the effect library from git
+Update the effect library from git:
+
 	1. Log in to the Raspberry Pi
 	2. Type "cd cosmo-dsp" 
 	3. Type "git pull"
 	4. If you get errors, see 
 
 Git errors and fixes:
+
 	1. 
 
 Selecting which Csound file to run on bootup:
+
 	1. Log in to the Raspberry Pi
 	2. Edit the script called "startup.sh" - you could for instance use the nano editor, in which you would type "nano startup.sh"
 
