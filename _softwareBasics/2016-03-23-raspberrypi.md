@@ -5,33 +5,33 @@ date: 2016-04-01 10:30:00
 ---
 
 ## Login
-- Mit Tastatur und Bildschirm: hostname -I
+- Directly using a screen and keyboard on the raspberry pi: hostname -I
 	- user: pi
 	- pw: raspberry
 
-- IP Adresse des Raspi
-{% highlight shell %}
+- get IP adress of this RPI
+```
 hostname -I
-{% endhighlight %}
+```
 
 # Connect via ssh in the terminal:
-{% highlight shell %}
+```
 ssh pi@raspberrypi.local
 pw: raspberry
-{% endhighlight %}
+```
 
 Download and use the [Putty](http://www.putty.org/) Software for Windows to login via ssh.
 
 
 ## List Audio interfaces
-{% highlight shell %}
+```
 aplay -l
 aplay -L
 speaker-test -c2	# Stereo Test
 
 speaker-test -c2 -Dhw:0 # Onboard Soundcard
 speaker-test -c2 -Dhw:1 # USB Soundcard
-{% endhighlight %}
+```
 - Adjust the sound volume: alsamixer
 
 
@@ -84,8 +84,9 @@ Buch S. 443-448
 ## Furhter:
 
 # Installing Software on the RPI
+```
 - sudo apt-get install softwarename
-
+```
 # Software to easily view, copy and modify files on network devices
 - Mac: [Cyberduck](https://cyberduck.io/?l=de)
 
