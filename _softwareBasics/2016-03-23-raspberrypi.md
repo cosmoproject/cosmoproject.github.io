@@ -36,43 +36,43 @@ speaker-test -c2 -Dhw:1 # USB Soundcard
 
 
 ## Play a sound
-{% highlight shell %}
+```
 aplay sounds/Chord.wav
 aplay -Dhw:0 sounds/Chord.wav	# Onboard Soundcard
 aplay -Dhw:1 sounds/Chord.wav	# USB Soundcard
-{% endhighlight %}
+```
 
 ## Navigate in the terminal
-{% highlight shell %}
+```
 ps 			# zeigt laufende Prozesse/Programme
 kill xxxx	# stoppt Programme
 ls			# zeigt Verzeichnisinhalt
 cd Ordner  		# wechselt in Ordner
-{% endhighlight %}
+```
 
 ## Find help in terminal
-{% highlight shell %}
+```
 man Befehl
 Befehl --help
-{% endhighlight %}
+```
 
 ## quickly look into file content
-{% highlight shell %}
+```
 cd csound
 more HelloWorld.csd
-{% endhighlight %}
+```
 
 
 ## Nano-Editor
-{% highlight shell %}
+```
 cd csound
 nano HelloWorld.csd
-{% endhighlight %}
+```
 
 ## Running a Csound Patch
-{% highlight shell %}
+```
 csound HelloWorld.csd
-{% endhighlight %}
+```
 
 ## using the GPIO Pins
 Buch S. 443-448
@@ -91,9 +91,9 @@ Buch S. 443-448
 
 
 # Startup Script
-{% highlight shell %}
+```
 nano on-startup/xxx.sh
-{% endhighlight %}
+```
 
 - Instruction how to define a fixed order for Audio-Devices in Linux [here](http://computers.tutsplus.com/articles/using-a-usb-audio-device-with-a-raspberry-pi--mac-55876)
 - Webbrowser (Internet connection required)
