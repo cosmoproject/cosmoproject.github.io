@@ -44,10 +44,11 @@ aplay -Dhw:1 sounds/Chord.wav	# USB Soundcard
 
 ## Navigate in the terminal
 ```
-ps 			# zeigt laufende Prozesse/Programme
-kill xxxx	# stoppt Programme
-ls			# zeigt Verzeichnisinhalt
-cd Ordner  		# wechselt in Ordner
+ps 			# show running processes with PIDs
+kill xxxx	# stop certain process by PID
+ls			# show content of folder
+cd Ordner  	# change into a folder
+cd ..		# leave the folder
 ```
 
 ## Find help in terminal
@@ -74,14 +75,9 @@ nano HelloWorld.csd
 csound HelloWorld.csd
 ```
 
-## using the GPIO Pins
-Buch S. 443-448
-
-<img src="{{ site.baseurl }}/pics/GPIO_Pin1.png" width="450">
-<img src="{{ site.baseurl }}/pics/GPIO_AllPins.png" width="450">
 
 
-## Furhter:
+## Further materials:
 
 # Installing Software on the RPI
 ```
