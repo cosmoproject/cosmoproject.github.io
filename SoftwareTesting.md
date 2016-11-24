@@ -1,6 +1,4 @@
 
-Debugging:
-
 How to log in to the Raspberry Pi:
 
 	Using a direct connection (ethernet cable) between your computer and the Raspberry Pi
@@ -61,6 +59,31 @@ To test audio input to Csound:
 	8. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
 	9. The audio coming in to the COSMO input should now be passed through Csound and out to the COSMO output. The RMS amplitude value of the input is printed in the console
 	10. Press "Ctrl-C" (possibly twice) to stop Csound
+
+How to configure the COSMO plank or HAT:
+	
+	1. Log in to the Raspberry Pi
+	2. Type "nano .cosmo" 
+	3. You can now list which inputs are used for switches and which outputs are used for LEDs
+	4. Each pot (or analogue in to be precise) will have two values, min and max, so if for instance want to reverse the direction of the pot, you will type 1023 in min and 0 in max.
+
+Update the firware for COSMO plank:
+
+	1. Log in to the Raspberry Pi
+	2. Type "cd cosmohat-fw" 
+	3. Type "git pull"
+	4. If you get errors, see 
+
+
+Update the firware for COSMO HAT:
+
+	1. Log in to the Raspberry Pi
+	2. Type "cd cosmohat-dw" 
+	3. Type "git pull"
+	4. If you get errors, see 
+	5. Type "make fuse"
+	6. Type "..."
+	
 
 Update the effect library from git:
 
