@@ -16,7 +16,7 @@ hostname -I
 
 # Connect via ssh in the terminal:
 ```
-ssh pi@raspberrypi.local
+ssh pi@cosmopi.local
 pw: raspberry
 ```
 
@@ -30,16 +30,24 @@ aplay -L
 speaker-test -c2	# Stereo Test
 
 speaker-test -c2 -Dhw:0 # Onboard Soundcard
-speaker-test -c2 -Dhw:1 # USB Soundcard
+speaker-test -c2 -Dhw:1 # USB Soundcard/Cirrus Logic Card
 ```
 - Adjust the sound volume: alsamixer
+
+# Cirrus Logic Audio Card (CLAC)
+The input and output channels of the CLAC can be turned on and off using the scripts provided in the following folder. This also allows to use the on-board microphone of the audio card, instead of the line-in connection.
+
+```
+ls CirrusLogic/bin/
+```
+
 
 
 ## Play a sound
 ```
 aplay sounds/Chord.wav
 aplay -Dhw:0 sounds/Chord.wav	# Onboard Soundcard
-aplay -Dhw:1 sounds/Chord.wav	# USB Soundcard
+aplay -Dhw:1 sounds/Chord.wav	# USB Soundcard / Cirrus Logic Card
 ```
 
 ## Navigate in the terminal
