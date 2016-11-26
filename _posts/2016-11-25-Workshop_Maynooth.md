@@ -17,7 +17,7 @@ pw: raspberry
 
 Using a direct connection (ethernet cable) between your computer and the Raspberry Pi
 
-	OS X (names may vary slightly depending on version of OS X):
+OS X (names may vary slightly depending on version of OS X):
 	
 	1. Connect an Ethernet cable between your computer and 
 	   Raspberry Pi - make sure the lights on the RPi Ethernet 
@@ -37,7 +37,7 @@ Using a direct connection (ethernet cable) between your computer and the Raspber
 	   the "Start" button
 	9. Now open Finder and go to "/Applications/Utilities" and
 	   open the app called "Terminal"
-	10. In the terminal you type ```ssh pi@cosmo1.local``` ("pi" is
+	10. In the terminal you type "ssh pi@cosmo1.local" ("pi" is
 	    the username we use to log on to the Pi and cosmo1.local 
 	    is the network name for this Pi. 
 	11. This should prompt you for a password to log on to the Pi. 
@@ -72,26 +72,27 @@ To test audio output from Csound:
 
 	1. Connect speakers or headphones to the output of the COSMO 
 	2. Log in to the Raspberry Pi 
-	3. Kill any running instances of python/csound by typing "killall python" 3 times
-	4. Type ```cd cosmo-dsp```
-	5. Type ```cd WorkshopTestFiles```
-	6. Type ```csound audio-out-test.csd```
-	7. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
-	8. You should now here some decending sine tones coming from the COSMO outputs
-	9. Press "Ctrl-C" (possibly twice) to stop Csound
+	3. Kill any running instances of python/csound by typing 
+	   "killall python" 3 times
+	4. Type "cd cosmo-dsp"
+	5. Type "cd WorkshopTestFiles"
+	6. Type "csound audio-out-test.csd"
+	7. You should now here some decending sine tones coming from 
+	   the COSMO outputs
+	8. Press "Ctrl-C" (possibly twice) to stop Csound
 
 To test audio input to Csound:
 
 	1. Connect an audio source to the input of the COSMO
 	2. Connect speakers or headphones to the output of the COSMO 
 	3. Log in to the Raspberry Pi 
-	4. Kill any running instances of python/csound by typing "killall python" 3 times
+	4. Kill any running instances of python/csound by typing 
+	   "killall python" 3 times
 	5. Type "cd cosmo-dsp"
 	6. Type "cd WorkshopTestFiles"
 	7. Type "csound audio-in-test.csd"
-	8. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
-	9. The audio coming in to the COSMO input should now be passed through Csound and out to the COSMO output. The RMS amplitude value of the input is printed in the console
-	10. Press "Ctrl-C" (possibly twice) to stop Csound
+	8. The RMS amplitude value of the input is printed in the console
+	9. Press "Ctrl-C" (possibly twice) to stop Csound
 
 # The Cosmo Effects Library
  see.. homepage
@@ -100,8 +101,10 @@ To test audio input to Csound:
 
 
 	1. Type "cd cosmo-dsp/library"
-	2. Make a local copy of "midi_cc.inc" by typing "cp midi_cc.in myMidi_cc.inc"
-	3. Type "nano myMidi_cc.inc" and put in your MIDI-Controller CC-numbers
+	2. Make a local copy of "midi_cc.inc" by typing 
+	   "cp midi_cc.in myMidi_cc.inc"
+	3. Type "nano myMidi_cc.inc" and put in your MIDI-Controller 
+	   CC values
 	4. "cp MidiCcExample.csd myMidiCcExample.csd"
 	5. Type
 
