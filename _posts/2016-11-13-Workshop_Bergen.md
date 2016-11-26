@@ -6,9 +6,9 @@ We had a fantastic time last weekend in Bergen. Doing our third COSMO Workshop! 
 
 ![Workshop](/images/news/Bergen_Workshop_2016.jpg)
 
-![Boxes!](/images/WorkshopBergen2016/Boxes.jpg)
+![Boxes](/images/WorkshopBergen2016/Boxes.jpg)
 
-[!Components!](/images/WorkshopBergen2016/Components.jpg)
+[!Components](/images/WorkshopBergen2016/Components.jpg)
 
 [!Soldering the Cross Mixer](/images/WorkshopBergen2016/CrossMixerFixing.jpg)
 
