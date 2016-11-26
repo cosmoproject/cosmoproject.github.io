@@ -5,9 +5,9 @@ title: Csound 30 Years Maynooth - Workshop Csound and Raspberry Pi
 
 A workshop in working with Csound on the Raspberry Pi at the Csound 30 year celebration conference at Maynooth University 26th of November 2016
 
-*Workshop Instructions
+# Workshop Instructions
 
-How to log in to the Raspberry Pi:
+## How to log in to the Raspberry Pi:
 
 Connect via ssh in the terminal:
 ```
@@ -17,7 +17,7 @@ pw: raspberry
 
 Using a direct connection (ethernet cable) between your computer and the Raspberry Pi
 
-OS X (names may vary slightly depending on version of OS X):
+OS X:
 	
 	1. Connect an Ethernet cable between your computer and 
 	   Raspberry Pi - make sure the lights on the RPi Ethernet 
@@ -41,7 +41,7 @@ OS X (names may vary slightly depending on version of OS X):
 	    the username we use to log on to the Pi and cosmo1.local 
 	    is the network name for this Pi. 
 	11. This should prompt you for a password to log on to the Pi. 
-	    The default password on the COSMO Raspbian Image is "raspberry"
+	    The default password is "raspberry"
 	12. You should now be logged on to your COSMO ready to make
 	    some crazy sounds! 
  
@@ -61,7 +61,7 @@ speaker-test -c2 -Dhw:1 # USB Soundcard/Cirrus Logic Card
 ```
 - Adjust the sound volume: alsamixer
 
-# Cirrus Logic Audio Card (CLAC)
+## Cirrus Logic Audio Card (CLAC)
 The input and output channels of the CLAC can be turned on and off using the scripts provided in the following folder. This also allows to use the on-board microphone of the audio card, instead of the line-in connection.
 
 ```
@@ -94,10 +94,10 @@ To test audio input to Csound:
 	8. The RMS amplitude value of the input is printed in the console
 	9. Press "Ctrl-C" (possibly twice) to stop Csound
 
-# The Cosmo Effects Library
+## The Cosmo Effects Library
  see.. homepage
 
-# Use a midi interface using MIDI Controller Numbers
+## Use a midi interface using MIDI Controller Numbers
 
 
 	1. Type "cd cosmo-dsp/library"
