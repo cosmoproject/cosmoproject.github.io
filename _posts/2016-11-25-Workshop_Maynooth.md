@@ -3,8 +3,9 @@ layout: post
 title: Csound 30 Years Maynooth - Workshop Csound and Raspberry Pi
 ---
 
+A workshop in working with Csound on the Raspberry Pi at the Csound 30 year celebration conference at Maynooth University 26th of November 2016
 
-## Introduction
+*Workshop Instructions
 
 How to log in to the Raspberry Pi:
 
@@ -18,31 +19,31 @@ Using a direct connection (ethernet cable) between your computer and the Raspber
 
 	OS X (names may vary slightly depending on version of OS X):
 	
-		1. Connect an Ethernet cable between your computer and 
-		   Raspberry Pi - make sure the lights on the RPi Ethernet 
-		   port are lit (orange and green)
-		2. On your Mac, press the Apple logo in the top left corner 
-		   and choose "System Preferences..."
-		3. Press the "Sharing" icon
-		4. Select the "Internet Sharing" option
-		5. In the dropdown menu next to "Share your connection from", 
-		   select "Wi-Fi"
-		6. In the list next to "To computers using" check the box 
-		   next to "Ethernet" or Thunderbolt Ethernet" (depending 
-		   on what model your Mac is)
-		7. Check the box to the left of "Internet Sharing" (in the
-		   column named "On") to start Internet Sharing
-		8. You will get a message box displaying a warning - push 
-		   the "Start" button
-		9. Now open Finder and go to "/Applications/Utilities" and
-		   open the app called "Terminal"
-		10. In the terminal you type "ssh pi@cosmo1.local" ("pi" is
-		    the username we use to log on to the Pi and cosmo1.local 
-		    is the network name for this Pi. 
-		11. This should prompt you for a password to log on to the Pi. 
-		    The default password on the COSMO Raspbian Image is "raspberry"
-		12. You should now be logged on to your COSMO ready to make
-		    some crazy sounds! 
+	1. Connect an Ethernet cable between your computer and 
+	   Raspberry Pi - make sure the lights on the RPi Ethernet 
+	   port are lit (orange and green)
+	2. On your Mac, press the Apple logo in the top left corner 
+	   and choose "System Preferences..."
+	3. Press the "Sharing" icon
+	4. Select the "Internet Sharing" option
+	5. In the dropdown menu next to "Share your connection from", 
+	   select "Wi-Fi"
+	6. In the list next to "To computers using" check the box 
+	   next to "Ethernet" or Thunderbolt Ethernet" (depending 
+	   on what model your Mac is)
+	7. Check the box to the left of "Internet Sharing" (in the
+	   column named "On") to start Internet Sharing
+	8. You will get a message box displaying a warning - push 
+	   the "Start" button
+	9. Now open Finder and go to "/Applications/Utilities" and
+	   open the app called "Terminal"
+	10. In the terminal you type ```ssh pi@cosmo1.local``` ("pi" is
+	    the username we use to log on to the Pi and cosmo1.local 
+	    is the network name for this Pi. 
+	11. This should prompt you for a password to log on to the Pi. 
+	    The default password on the COSMO Raspbian Image is "raspberry"
+	12. You should now be logged on to your COSMO ready to make
+	    some crazy sounds! 
  
  Windows:
  Download and use the [Putty](http://www.putty.org/) Software for Windows to login via ssh.
@@ -72,9 +73,9 @@ To test audio output from Csound:
 	1. Connect speakers or headphones to the output of the COSMO 
 	2. Log in to the Raspberry Pi 
 	3. Kill any running instances of python/csound by typing "killall python" 3 times
-	4. Type "cd cosmo-dsp"
-	5. Type "cd WorkshopTestFiles"
-	6. Type "csound audio-out-test.csd"
+	4. Type ```cd cosmo-dsp```
+	5. Type ```cd WorkshopTestFiles```
+	6. Type ```csound audio-out-test.csd```
 	7. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
 	8. You should now here some decending sine tones coming from the COSMO outputs
 	9. Press "Ctrl-C" (possibly twice) to stop Csound
