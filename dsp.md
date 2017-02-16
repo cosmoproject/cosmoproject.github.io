@@ -9,7 +9,7 @@ A basic collection of DSP code for the COSMO can be found in this [repository](h
 
 This repository comprises a library with [Audio Effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) (e.g Reverbs, Delays, Distortion ..). If you have experience in writing Csound Patches, you can take one of the [examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
 
-A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning effect parameters (see List of supported effect UDOs) to the harware controllers. A simple Patch looks like this:
+A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning 'effect arguments' (see List of supported effect UDOs) to the harware controllers. A simple Patch looks like this:
 
     {"COSMO-Patch": {
         "pot0":
