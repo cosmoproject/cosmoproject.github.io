@@ -29,7 +29,11 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 ![alt text](/images/Live_01.png "Live-01")
 
-## List of supported effect UDOs: 
+
+## List of supported effect UDOs:
+
+
+
 | UDO              | Arguments                                                                                                                                    |
 |:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
 | AnalogDelay.csd  | Delay time, Feedback, Dry/wet mix                                                                                                            |
@@ -52,6 +56,8 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 | TriggerDelay.csd | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
 | Volume.csd       | Level                                                                                                                                        |
 | Wobble.csd       | Frequency, Dry/wet mix                                                                                                                       |
+
+
 
 ## Note
 
