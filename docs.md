@@ -119,8 +119,8 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 
 1. Log in to the Raspberry Pi
 2. Run raspi-config
-3. Go to "Advanced ..something"
-4. Go to "Change hostname"
+3. Go to "Advanced Options"
+4. Go to "Hostname"
 5. Type in your desired name
 6. Press ok and let the Raspberry reboot
 7. You can now access your Raspberry Pi using the name you chose + '.local' (eg. 'myawesomecosmo.local')
