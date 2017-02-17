@@ -82,24 +82,21 @@ More instructions coming soon..
 - Coming...
 
 
-## <a name="cosmo-software"></a> 
-
-## 1. Setting up and connecting to the Raspberry Pi
-	The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both it and your computer to a router or some other existing network. The other solution, which is to set up a direct connection (an ethernet cable) between your computer and RPi/COSMO, involves a few more steps and can have several quirks depending on type and version of OS. 
+## <a name="cosmo-software"></a>1. Setting up and connecting to the Raspberry Pi
+The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both it and your computer to a router or some other existing network. The other solution, which is to set up a direct connection (an ethernet cable) between your computer and RPi/COSMO, involves a few more steps and can have several quirks depending on type and version of OS. 
 
 ### 1.1 How to log in to the Raspberry Pi on existing network
+**OS X**
+1. Open Finder, go to "/Applications/Utilities" and open the app called "Terminal"
+2. In the terminal you type "ssh pi@cosmo1.local" ("pi" is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](cosmoproject.github.io/docs/#change-network-name))
+3. This should prompt you for a password to log on to the Pi. The default password on the COSMO Raspbian Image is "raspberry"
 
-	**OS X**
-	1. Open Finder, go to "/Applications/Utilities" and open the app called "Terminal"
-	2. In the terminal you type "ssh pi@cosmo1.local" ("pi" is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](cosmoproject.github.io/docs/#change-network-name))
-	3. This should prompt you for a password to log on to the Pi. The default password on the COSMO Raspbian Image is "raspberry"
-
-	**Windows**
-	1. Download and install "putty" (www.putty.org/)
-	2. Open "putty"
-	3. Type in "cosmo1.local" in the "Host name or IP address"-field. Make sure the connection type is set to SSH
-	4. Press "Open"
-	5. When prompted, type in username "pi" and password "raspberry"
+**Windows**
+1. Download and install "putty" (www.putty.org/)
+2. Open "putty"
+3. Type in "cosmo1.local" in the "Host name or IP address"-field. Make sure the connection type is set to SSH
+4. Press "Open"
+5. When prompted, type in username "pi" and password "raspberry"
 
 
 ### 1.2 How to log in to the Raspberry Pi using a direct connection 
