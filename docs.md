@@ -148,11 +148,6 @@ More instructions coming soon..
 	3. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
 	4. Each analogue input will have two values, min and max, which can be used to calibrate each input (see bullet 6 in section 2.2) and invert the signal (setting max value as min and vica verca) 
 
-How to calibrate the analogue inputs on COSMO plank or COSMO-HAT
-	1. Log in to the Raspberry Pi
-	2. Type "nano .cosmo"
-	3. You can now set minimum and maximum values for all analogue inputs
-
 ### 2.3 How to test audio output from Csound
 
 	1. Connect speakers or headphones to the output of the COSMO 
