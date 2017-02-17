@@ -87,16 +87,16 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 
 ### 1.1 How to log in to the Raspberry Pi on existing network
 **OS X**
-1. Open Finder, go to ```"/Applications/Utilities"``` and open the app called ```"Terminal"```
-2. In the terminal you type ```"ssh pi@cosmo1.local"``` (**pi** is the username we use to log on to the Pi and **cosmo1.local** is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](#change-network-name))
+1. Open Finder, go to ```"/Applications/Utilities"``` and open the app called ```Terminal```
+2. In the terminal you type ```"ssh pi@cosmo1.local"``` (```"pi"``` is the username we use to log on to the Pi and ```"cosmo1.local"``` is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO"](#change-network-name))
 3. This should prompt you for a password to log on to the Pi. The default password on the COSMO Raspbian Image is **raspberry**
 
 **Windows**
-1. Download and install **putty** [www.putty.org](www.putty.org/)
+1. Download and install **putty** from [www.putty.org](www.putty.org/)
 2. Open **putty.exe**
-3. Type in **cosmo1.local** in the ```"Host name or IP address"```-field. Make sure the connection type is set to **SSH**
+3. Type in "```"cosmo1.local"``` in the ```"Host name or IP address"```-field. Make sure the connection type is set to **SSH**
 4. Press ```"Open"```
-5. When prompted, type in username **pi** and password **raspberry**
+5. When prompted, type in username **pi** and password **```"raspberry"```**
 
 
 ### 1.2 How to log in to the Raspberry Pi using a direct connection 
@@ -107,18 +107,18 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 3. Press the ```"Sharing"``` icon
 4. Select the ```"Internet Sharing"``` option
 5. In the dropdown menu next to ```"Share your connection from"```, select ```"Wi-Fi"```
-6. In the list next to "To computers using" check the box next to **Ethernet** or **Thunderbolt Ethernet** (depening on what model your Mac is)
+6. In the list next to "To computers using" check the box next to ```"Ethernet"``` or ```"Thunderbolt Ethernet"``` (depening on what model your Mac is)
 7. Check the box to the left of ```"Internet Sharing"``` (in the column named **On**) to start Internet Sharing
-8. You will get a message box displaying a warning - push the "Start" button
+8. You will get a message box displaying a warning - push the ```"Start"``` button
 9. Now open Finder and go to ```"/Applications/Utilities"``` and open the app called ```"Terminal"```
-10. In the terminal you type ```"ssh pi@cosmo1.local"``` (**pi** is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](#change-network-name))
+10. In the terminal you type ```"ssh pi@cosmo1.local"``` (**pi** is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO"](#change-network-name))
 11. This should prompt you for a password to log on to the Pi. The default password on the COSMO Raspbian Image is **raspberry**
 12. You should now be logged on to your COSMO ready to make some crazy sounds! If you had issues with connecting - see the troubleshooting section
 
 ### 1.3 <a name="change-network-name"></a>How to change the network name of your COSMO
 
 1. Log in to the Raspberry Pi
-2. Run **raspi-config**
+2. Type ```"raspi-config"```
 3. Go to ```"Advanced Options"```
 4. Go to ```"Hostname"```
 5. Type in your desired name
@@ -131,9 +131,9 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 ### 2.1 How to test the COSMO plank
 
 1. Log in to the Raspberry Pi
-2. Kill any running instances of python/csound by typing "killall python" 3 times
-3. Type "cd cosmohat-fw"
-4. Type "python planck.py"
+2. Kill any running instances of python/csound by typing ```"killall python"``` 3 times
+3. Type ```"cd cosmohat-fw"```
+4. Type ```"python planck.py"```
 5. All leds will blink in a binary counting pattern and you will see the values for all pots and switches when you twist and push them
 6. Note down all maximum and minimum values for the analoge inputs
 
@@ -141,39 +141,39 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 ### 2.2 How to configure the COSMO plank or HAT
 
 1. Log in to the Raspberry Pi
-2. Type "nano .cosmo" 
+2. Type ```"nano .cosmo"``` 
 3. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
-4. Each analogue input will have two values, min and max, which can be used to calibrate each input (see bullet 6 in section 2.2) and invert the signal (setting max value as min and vica verca) 
+4. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 1023) and invert the signal (setting max value as min and vica verca) 
 
 ### 2.3 How to test audio output from Csound
 
 1. Connect speakers or headphones to the output of the COSMO 
 2. Log in to the Raspberry Pi 
-3. Kill any running instances of python/csound by typing "killall python" 3 times
-4. Type "cd cosmo-dsp"
-5. Type "cd WorkshopTestFiles"
-6. Type "csound audio-out-test.csd"
+3. Kill any running instances of python/csound by typing ```"killall python"``` 3 times
+4. Type ```"cd cosmo-dsp"```
+5. Type ```"cd WorkshopTestFiles"```
+6. Type ```"csound audio-out-test.csd"```
 7. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
 8. You should now here some decending sine tones coming from the COSMO outputs
-9. Press "Ctrl-C" (possibly twice) to stop Csound
+9. Press ```"Ctrl-C"``` (possibly twice) to stop Csound
 
 ### 2.4 How to test audio input to Csound
 
 1. Connect an audio source to the input of the COSMO
 2. Connect speakers or headphones to the output of the COSMO 
 3. Log in to the Raspberry Pi 
-4. Kill any running instances of python/csound by typing "killall python" 3 times
-5. Type "cd cosmo-dsp"
-6. Type "cd WorkshopTestFiles"
-7. Type "csound audio-in-test.csd"
+4. Kill any running instances of python/csound by typing ```"killall python"``` 3 times
+5. Type ```"cd cosmo-dsp"```
+6. Type ```"cd WorkshopTestFiles"```
+7. Type ```"csound audio-in-test.csd"```
 8. Make sure the COSMO Cross Mixer (if installed) is dialed to 100% wet
 9. The audio coming in to the COSMO input should now be passed through Csound and out to the COSMO output. The RMS amplitude value of the input is printed in the console
-10. Press "Ctrl-C" (possibly twice) to stop Csound
+10. Press ```"Ctrl-C"``` (possibly twice) to stop Csound
 
 ### 2.5 How to selecting which Csound file to run on startup
 
 1. Log in to the Raspberry Pi
-2. Edit the script called "startup.sh" - you could for instance use the nano editor, in which you would type "nano startup.sh"
+2. Edit the script called ```"startup.sh"``` - you could for instance use the nano editor, in which you would type ```"nano startup.sh"```
 
 
 ## 3. Software and firmware updates
@@ -181,25 +181,25 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 ### 3.1 Update the firware for COSMO plank:
 
 1. Log in to the Raspberry Pi
-2. Type "cd cosmohat-fw" 
-3. If you have changed any files within this folder, type "git stash"
-4. Type "git pull"
+2. Type ```"cd cosmohat-fw"```
+3. If you have changed any files within this folder, type ```"git stash"```
+4. Type ```"git pull"```
 
 
 ### 3.2 Update the firware for COSMO HAT:
 
 1. Log in to the Raspberry Pi
-2. Type "cd cosmohat-dw" 
-3. If you have changed any files within this folder, type "git stash"
-4. Type "git pull"
-5. Type "make fuse"	
+2. Type ```"cd cosmohat-fw"``` 
+3. If you have changed any files within this folder, type ```"git stash"```
+4. Type ```"git pull"```
+5. Type ```"make fuse"```	
 
 ### 3.3 Update the effect library from git:
 
 1. Log in to the Raspberry Pi
-2. Type "cd cosmo-dsp" 
-3. If you have changed any files within this folder, type "git stash"
-4. Type "git pull"
+2. Type ```"cd cosmo-dsp"``` 
+3. If you have changed any files within this folder, type ```"git stash"```
+4. Type ```"git pull"```
 
 ### 3.4 Update entire image to latest version 
 
