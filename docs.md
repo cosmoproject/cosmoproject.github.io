@@ -88,7 +88,7 @@ The easiest way of connecting to your Raspberry Pi/COSMO is by connecting both i
 ### 1.1 How to log in to the Raspberry Pi on existing network
 **OS X**
 1. Open Finder, go to "/Applications/Utilities" and open the app called "Terminal"
-2. In the terminal you type "ssh pi@cosmo1.local" ("pi" is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](cosmoproject.github.io/docs/#change-network-name))
+2. In the terminal you type "ssh pi@cosmo1.local" ("pi" is the username we use to log on to the Pi and cosmo1.local is the network name for this Pi. If you want a personal network name for your COSMO, see ["How to change the network name of your COSMO](#change-network-name))
 3. This should prompt you for a password to log on to the Pi. The default password on the COSMO Raspbian Image is "raspberry"
 
 **Windows**
