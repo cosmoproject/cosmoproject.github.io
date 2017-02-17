@@ -6,6 +6,8 @@ permalink: /downloads/
 
 ### Downloads
 
-A link to download a pre-configured Raspian for the COSMO will be uploaded here soon.
+* [Latest version of Raspbian COSMO version SD card image](https://drive.google.com/open?id=0B-Iu7KEexnCpOTk2N0RoY2hiaHM)
 
-You're in a hurry and don't mind helping us with debugging..send us an email. ;-)
+Bonjour name: cosmo1.local
+Login: pi
+Password: raspberry

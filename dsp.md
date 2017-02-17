@@ -9,7 +9,7 @@ A basic collection of DSP code for the COSMO can be found in this [repository](h
 
 This repository comprises a library with [Audio Effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) (e.g Reverbs, Delays, Distortion ..). If you have experience in writing Csound Patches, you can take one of the [examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
 
-A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning 'effect arguments' (see List of supported effect UDOs) to the harware controllers. A simple Patch looks like this:
+A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning 'effect arguments' (see List of supported effect UDOs) to the harware controllers. A simple patch looks like this:
 
     {"COSMO-Patch": {
         "pot0":
@@ -24,7 +24,7 @@ A better way to start building your effect instrument is using the [COSMO-Patche
         }
     }
     
-From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher).
+From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). If you're using the COSMO image, you don't need to do the install part. 
 
 
 
@@ -32,7 +32,7 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 
 | UDO              | Arguments                                                                                                                                    |
-|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| -----------------| ---------------------------------------------------------------------------------------------------------------------------------------------|
 | AnalogDelay.csd  | Delay time, Feedback, Dry/wet mix                                                                                                            |
 | Blur.csd         | Blur time, Gain, StereoMode, Dry/wet mix                                                                                                     |
 | Chorus.csd       | Feedback, Dry/wet mix                                                                                                                        |
@@ -59,4 +59,4 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 ## Note
 
- We are planning to build a community sharing their individual csound-based effect instruments. If you'd like to share your code, [contact us](mailto:csoundonstage@gmail.com) and become added to the git-repository.
+ We want to build a community sharing their individual csound-based effect instruments. If you'd like to share your code, [contact us](mailto:csoundonstage@gmail.com) and become added to the git-repository.
