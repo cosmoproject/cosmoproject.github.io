@@ -45,7 +45,7 @@ For the COSMO Raspbian Image **```pi```** is the default username, **```raspberr
 #### OS X
 1. Open Finder, go to **```/Applications/Utilities```** and open the app called **```Terminal```**
 2. In the terminal you type **```ssh pi@cosmo1.local```**
-3. When prompted, type in password **```raspberry```in**
+3. When prompted, type in password **```raspberry```**
 
 #### Windows
 1. Download and install **```putty```** from [www.putty.org](www.putty.org/)
