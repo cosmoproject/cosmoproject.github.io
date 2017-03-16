@@ -313,6 +313,35 @@ Coming...
 
 Coming...
 
+## 7. Other useful information
+
+### 7.1 Edit files locally
+
+The FTP client **Cyberduck** (can be downloaded at [https://cyberduck.io/](https://cyberduck.io/)) allows you to edit files on the Pi in your favorite text editor locally on your computer. To connect, select **```SFTP```** as connection type and enter bonjour-name, username and password (**```raspberry```**) as shown here:
+
+<img src="/images/Cyberdyck_connection.jpg">
+
+When you have connected, select the file you want to edit and simply hit the edit-button. This will open the file in the associated local editor and automatically upload and overwrite the file on the Pi every time you save. 
+
+### 7.2 List Audio interfaces
+
+```
+aplay -l
+aplay -L
+speaker-test -c2    # Stereo Test
+
+speaker-test -c2 -Dhw:0 # Onboard Soundcard
+speaker-test -c2 -Dhw:1 # USB Soundcard/Cirrus Logic Card
+```
+To adjust the sound volume, use the command **```alsamixer```**
+
+#### Cirrus Logic Audio Card (CLAC)
+The input and output channels of the CLAC can be turned on and off using the scripts provided in the following folder. This also allows to use the on-board microphone of the audio card, instead of the line-in connection.
+
+```
+ls CirrusLogic/bin/
+```
+
 <!-- ############################################################################################################################## -->
 
 
@@ -322,79 +351,4 @@ Coming...
 
 
 
-
-<!-- THIS PART NEEDS REWRITING
-
-## <a name="csound"></a>4. Basic Csound on COSMO
-
-On the COSMO box, we use a python script to hanlde both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **cosmo.py** and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. On our Raspbian image, this python file is called from the script **startup.sh**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **csoundFile** in **startup.sh** which has a string that points to a specific csd file:
-
-```
-
-csoundFile = "/home/pi/cosmo-dsp/WorkshopTestFiles/knob-test.csd"
-
-```
-
-As the path indicates, the Csound files are placed in a separate folder which is a clone of the [cosmo-dsp](https://github.com/cosmoproject/cosmo-dsp)-repository. At the moment we have to folders:
-
-- **WorkshopTestFiles:**
-        This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
-
-- **Effects:**
-        We have tried to make a as simple as possible solution for those unfamiliar with Csound to be able to patch different effects together. The separate effects are placed in the folder called **UDOs** (UDO stands for User Defined Opcode) and the file **SimpleSetup.csd** shows the basics to combine the effects and map the controllers onto the effect parameters:
-
-```
-#include "/Reverb.csd"
-#include "UDOs/Lowpass.csd"
-```
-
-Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If you want to use e.g. the MultiDelay effect you need to add the line **#include "UDOs/MultiDelay.csd"**
-
-```
-instr 1 
-#include "../Includes/adc_channels.inc"
-#include "../Includes/gpio_channels.inc"
-```
-
-The two first files includes the code for reading the knobs, switches and leds. The values from these are put into global control rate variables called **gkpotX**, **gkswitchX** and **gkledX** accordingly (the X represents the number (0-indexed) of the controller, so the first knob would get the name **gkpot0** 
-
-The file **switch2led.inc** includes code which connects led 1 to switch 1 etc. If you want to control the leds directly, you need to remove this include line.
-
-```
-aL, aR ins
-```
-
-This is the code for getting audio into Csound. **ins** is a Csound opcode (a native Csound module) which ouputs the incoming audio into the audio rate variables **aL** and **aR**
-
-
-```
-; Reverb arguments: decay, cutoff, mix
-aL, aR Reverb aL, aR, gkpot0, gkpot1, gkswitch0
-
-```
-
-Reverb is a UDO (User Defined Opcode) which takes a stereo input signal with 3 arguments (decay, cutoff and mix) and applies reverberation to the signal. The ouput is also a stereo signal. Notice that **aL** and **aR** are used on both right and left side of **Reverb**; this means that we first send the dry signal into the reverb effect and then overwrite the dry signal with the reverberant signal. This way makes it very easy to switch the order of effects without changing any code - you simply just reorder by switching lines.
-
-The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1). 
-    
-```
-; Lowpass_Stereo arguments: cutoff, resonance
-aL, aR Lowpass_Stereo aL, aR, gkpot2, gkpot3
-```
-
-Here a stereo lowpass filter is applied to the signal coming out from the reverb effect. Knob 3 and 4 are set up to control the filter cutoff and resonance respectively. The lowpass filter also have a distortion argument which we don't use here. All effects are made in this way so actually all arguments are optional, but only in the order they are placed (e.g. you can't skip resonance and then include distortion). 
-
-```
-outs aL, aR
-```
-The audio coming out from the lowpass filter are sent to the **outs** opcode which sends the audio to the actual hardware device (sound card).
-
-This example was made to be as simple and clear as possible. To see a bit more advanced example which illustrates how you can achieve more flexible routing like sending to different effects in parallell, see the files **ExampleSetup.csd**. 
-
-A basic understanding of Csound is highly recommended before getting too experimental. The FLOSS manual is an excellent resource for learning Csound: 
-
-[http://floss.booktype.pro/csound/preface/](http://floss.booktype.pro/csound/preface/)
-
-
--->
 
