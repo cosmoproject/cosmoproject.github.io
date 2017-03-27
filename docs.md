@@ -154,7 +154,7 @@ of the Rasperry Pi 40-pin header.
 
 Picture coming...
 
-### 2.5 COSMO Plank to Raspberry Pi
+### 2.5 COSMO plank to Raspberry Pi
 
 Coming...
 
@@ -202,26 +202,46 @@ Here are some examples of COSMO-designs from previous workshops:
 <!-- ############################################################################################################################## -->
 
 
-## 4. Test and calibrate
+## 4. Configure and test
 
-### 4.1 How to test the COSMO plank
+
+### 4.1 How to configure the COSMO plank 
+
+1. Log in to the Raspberry Pi
+2. Type **```cp cosmo-fw/cosmo.config.plank.sample .cosmo```**
+3. Type **```nano .cosmo```***
+4. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
+5. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 1023) and invert the signal (setting max value as min and vica verca) 
+
+### 4.2 How to configure the COSMO HAT 
+
+1. Log in to the Raspberry Pi
+2. Type **```cp cosmo-fw/cosmo.config.hat.sample .cosmo```**
+3. Type **```nano .cosmo```***
+4. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
+5. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 8192) and invert the signal (setting max value as min and vica verca) 
+
+### 4.3 How to test the COSMO plank
 
 1. Log in to the Raspberry Pi
 2. Kill any running instances of python/csound by typing **```killall python```** 3 times
-3. Type **```cd cosmohat-fw```**
-4. Type **```python planck.py```**
+3. Type **```cd cosmo-fw```**
+4. Type **```python check_plank.py```**
 5. All leds will blink in a binary counting pattern and you will see the values for all pots and switches when you twist and push them
 6. Note down all maximum and minimum values for the analoge inputs
 
-
-### 4.2 How to configure the COSMO plank or HAT
+### 4.4 How to test the COSMO HAT
 
 1. Log in to the Raspberry Pi
-2. Type **```nano .cosmo```**
-3. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
-4. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 1023) and invert the signal (setting max value as min and vica verca) 
+2. Kill any running instances of python/csound by typing **```killall python```** 3 times
+3. Type **```cd cosmo-fw```**
+4. Type **```python check_hat.py```**
+5. All leds will blink in a single running light 
+6. Note down all maximum and minimum values for the analoge inputs
 
-### 4.3 How to test audio output from Csound
+
+
+### 4.4 How to test audio output from Csound
 
 1. Connect speakers or headphones to the output of the COSMO 
 2. Log in to the Raspberry Pi 
@@ -233,7 +253,7 @@ Here are some examples of COSMO-designs from previous workshops:
 8. You should now here some decending sine tones coming from the COSMO outputs
 9. Press **```Ctrl-C```** (possibly twice) to stop Csound
 
-### 4.4 How to test audio input to Csound
+### 4.5 How to test audio input to Csound
 
 1. Connect an audio source to the input of the COSMO
 2. Connect speakers or headphones to the output of the COSMO 
@@ -268,18 +288,18 @@ Example of how to play with COSMO:
 
 ## 6. Update
 
-### 6.1 Update the firware for COSMO plank
+### 6.1 Update the firmware for COSMO plank
 
 1. Log in to the Raspberry Pi
-2. Type **```cd cosmohat-fw```**
+2. Type **```cd cosmo-fw```**
 3. If you have changed any files within this folder, type **```git stash```**
 4. Type **```git pull```**
 
 
-### 6.2 Update the firware for COSMO HAT
+### 6.2 Update the firmware for COSMO HAT
 
 1. Log in to the Raspberry Pi
-2. Type **```cd cosmohat-fw```**
+2. Type **```cd cosmo-fw```**
 3. If you have changed any files within this folder, type **```git stash```**
 4. Type **```git pull```**
 5. Type **```make fuse```**	
@@ -299,7 +319,7 @@ You will need a SD card adapter and reader to complete these steps
 
 #### OS X
 
-1. Download the latest COSMO image file from [this location](https://drive.google.com/open?id=0B-Iu7KEexnCpOTk2N0RoY2hiaHM)
+1. Download the latest COSMO image file from [this location](https://drive.google.com/open?id=0B-Iu7KEexnCpdWVKUFRmUTdaRWc)
 2. Power down the COSMO and extract the SD card from underneath the Pi
 3. Insert to SD card into an adapter and the adapter into your reader
 4. Open the terminal and navigate to the folder where you have placed the COSMO image
