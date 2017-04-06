@@ -209,7 +209,7 @@ Here are some examples of COSMO-designs from previous workshops:
 
 1. Log in to the Raspberry Pi
 2. Type **```cp cosmo-fw/cosmo.config.plank.sample .cosmo```**
-3. Type **```nano .cosmo```***
+3. Type **```nano .cosmo```**
 4. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
 5. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 1023) and invert the signal (setting max value as min and vica verca) 
 
@@ -217,7 +217,7 @@ Here are some examples of COSMO-designs from previous workshops:
 
 1. Log in to the Raspberry Pi
 2. Type **```cp cosmo-fw/cosmo.config.hat.sample .cosmo```**
-3. Type **```nano .cosmo```***
+3. Type **```nano .cosmo```**
 4. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
 5. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 8192) and invert the signal (setting max value as min and vica verca) 
 
