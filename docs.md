@@ -101,7 +101,13 @@ Coming....
 
 ## 2. Solder
 
-### 2.1 Power Supply Unit
+### 2.1 About custom COSMO hardware
+These instructions are primarily for building a COSMO Box with the hardware components we provide during our workshops. Unfortunately we don't have our custom designed controller board, COSMO plank, or our custom designed stereo true bypass and dry/wet cross mixer board available for sale anywhere, but it's all open source, so if you want to produce and assemble the PCBs yourself head over to our github.
+
+- COSMO plank schematics can be found here: [https://github.com/cosmoproject/plank](https://github.com/cosmoproject/plank)
+- CrossMixer schematics can be found here: [https://github.com/cosmoproject/bypass_crossmix](https://github.com/cosmoproject/bypass_crossmix)
+
+### 2.2 Power Supply Unit
 - Solder 9V connector to the In (- ground; +) of the **MH-MINI-360** converter
 
 <center>
@@ -126,7 +132,7 @@ Coming....
 
 (If you're using the Cirrus Audio Logic card you can use a power jack instead of micro USB to power the Pi through the Cirrus Audio Logic card)
 
-### 2.2 CrossMixer audio in/out
+### 2.3 CrossMixer audio in/out
 
 <object data="/images/instructions/CrossMixer V2 - in-send-receive-out-print.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="overflow:hidden" width="700px" height="985px">
     <embed src="/images/instructions/CrossMixer V2 - in-send-receive-out-print.pdf">
@@ -136,7 +142,7 @@ Coming....
 
 If you have V1 of the COSMO CrossMixer, download <a href="/images/instructions/CrossMixer V1 - in-send-receive-out-print.pdf">this pdf</a>
 
-### 2.3 CrossMixer pot, LED, switch and power
+### 2.4 CrossMixer pot, LED, switch and power
 
 <object data="/images/instructions/CrossMixer V2 - Wiring - pot_LED_switch.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="overflow:hidden" width="700px" height="985px">
     <embed src="/images/instructions/CrossMixer V2 - Wiring - pot_LED_switch.pdf.pdf">
@@ -147,18 +153,18 @@ If you have V1 of the COSMO CrossMixer, download <a href="/images/instructions/C
 If you have V1 of the COSMO CrossMixer, download <a href="CrossMixer V1 - Wiring - pot_LED_switch.pdf">this pdf</a>
 
 
-### 2.4 COSMO HAT to Raspberry Pi
+### 2.5 COSMO HAT to Raspberry Pi
 
 The only thing needed to connect the COSMO HAT to the Pi, is to solder a 40-pin header on to the COSMO HAT and then attach the HAT on top
 of the Rasperry Pi 40-pin header.
 
 Picture coming...
 
-### 2.5 COSMO plank to Raspberry Pi
+### 2.6 COSMO plank to Raspberry Pi
 
 Coming...
 
-### 2.6 Pots, switches and LEDs
+### 2.7 Pots, switches and LEDs
 
 <object data="/images/instructions/COSMO plank - Wiring.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="overflow:hidden" width="700px" height="985px">
     <embed src="/images/instructions/COSMO plank - Wiring.pdf">
@@ -216,10 +222,11 @@ Here are some examples of COSMO-designs from previous workshops:
 ### 4.2 How to configure the COSMO HAT 
 
 1. Log in to the Raspberry Pi
-2. Type **```cp cosmo-fw/cosmo.config.hat.sample .cosmo```**
-3. Type **```nano .cosmo```**
-4. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
-5. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 8192) and invert the signal (setting max value as min and vica verca) 
+2. Check that your boot settings are configured for COSMO HAT - see [section 6.3 Update /boot/config.txt for COSMO HAT](#63-update-bootconfigtxt-for-cosmo-hat)
+3. Type **```cp cosmo-fw/cosmo.config.hat.sample .cosmo```**
+4. Type **```nano .cosmo```**
+5. You can now list which inputs are used for switches and which outputs are used for LEDs and change the order
+6. Each analogue input will have two values, min and max, which can be used to calibrate each input (values have to be in the range from 0 to 8192) and invert the signal (setting max value as min and vica verca) 
 
 ### 4.3 How to test the COSMO plank
 
@@ -238,7 +245,6 @@ Here are some examples of COSMO-designs from previous workshops:
 4. Type **```python check_hat.py```**
 5. All leds will blink in a single running light 
 6. Note down all maximum and minimum values for the analoge inputs
-
 
 
 ### 4.4 How to test audio output from Csound
@@ -304,18 +310,30 @@ Example of how to play with COSMO:
 4. Type **```git pull```**
 5. Type **```make fuse```**	
 
-### 6.3 Update the effect library from ```git```
+### 6.3 Update /boot/config.txt for COSMO HAT
+
+1. Log in to the Raspberry Pi
+2. Type **```cd /boot```**
+3. Type **```sudo nano config.txt```**
+4. At the end of the file, there are two lines you need to delete
+5. First find and delete **```dtparam=audio=on```**
+6. Secondly find and delete **```dtoverlay=rpi-cirrus-wm5102```**
+7. Save and reboot your Raspberry Pi
+
+### 6.4 Update the effect library from ```git```
 
 1. Log in to the Raspberry Pi
 2. Type **```cd cosmo-dsp```** 
 3. If you have changed any files within this folder, type **```git stash```**
 4. Type **```git pull```**
 
-### 6.4 Update entire image to latest version 
+### 6.5 Update entire image to latest version 
 
 CAREFUL! These operations can make your computer unusable if you mess up the commands! Read carefully!!
 
 You will need a SD card adapter and reader to complete these steps
+
+**NB!** If you're using the COSMO HAT, you will need to make some changes to the /boot/config.txt file for it to work. See [section 6.3 Update /boot/config.txt for COSMO HAT](#63-update-bootconfigtxt-for-cosmo-hat)
 
 #### OS X
 
