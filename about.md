@@ -38,7 +38,7 @@ Former Members:
 
 The project is funded by the [Arts Council Norway](http://www.kulturradet.no/)
 
-![alt text](images/logos/kulturraadet_sort_stor.png)
+![alt text](images/logos/kulturraadet_sort_liten.png)
 
 [1] Ervik, Kim; Hofmann, Alex, and Waerstad, Bernt I. (2013)
 "COSMO - Csound On Stage Musical Operator,"
