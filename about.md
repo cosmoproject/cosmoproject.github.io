@@ -36,14 +36,25 @@ Former Members:
 
 [csoundonstage@gmail.com](mailto:csoundonstage@gmail.com)
 
-The project is funded by the Arts Council Norway and has been presented at the following international conferences:
+The project is funded by the [Arts Council Norway](http://www.kulturradet.no/)
+
+![alt text](images/logos/kulturraadet_sort_stor.png)
 
 [1] Ervik, Kim; Hofmann, Alex, and Waerstad, Bernt I. (2013)
 "COSMO - Csound On Stage Musical Operator,"
-in 2nd International Csound Conference (Boston, US).
+at 2nd International Csound Conference (Boston, USA).
 
 [2] Hofmann, Alex and Waerstad, Bernt I. (2015)
-"COSMO 2.0 -Csound on Stage Musical Operator,"
-in The 3rd International Csound Conference (St. Petersburg, RU).
+"COSMO 2.0 - Csound on Stage Musical Operator,"
+at The 3rd International Csound Conference (St. Petersburg, Russia).
+
+[3] Hofmann, Alex; Waerstad, Bernt I. and Koch, Kristoffer E. (2016) 
+"Csound Instruments On Stage" 
+at New Interfaces for Musical Expression 2016 (Brisbane, Australia)
+
+[4] Hofmann, Alex; Waerstad, Bernt I.; Balasubramanian, Saranya and Koch, Kristoffer E. (2017)
+"From interface design to the software instrument - Mapping as an approach to FX-instrument building"
+at New Interfaces for Musical Expression 2017 (Copenhage, Denmark)
+
 
 
