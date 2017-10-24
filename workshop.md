@@ -4,14 +4,11 @@ title: Workshop
 permalink: /workshop/
 ---
 
-### Latest news!
-The next workshops are taking place at Bitraf in Oslo (NO) on the 29th and 30th of October and at BEK in Bergen (NO) on the 12th and 13th of November. More details to come.
-
 ### Workshop description
 Currently the workshops are planned for a two-day (each 6 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.
 
-### Designs
-The basic design is a guitar pedal with 5 knobs, 3 foot switches and 4 LEDs. However, according to the avialable components or design ideas from the attendencies, the design is up to you. The COSMO-HAT allows to connect up to 8 analog control inputs (knobs or switches) and 8 LEDs. The current design forsees a stereo USB soundcard, but any multichannel USB soundcard running with the raspberry pi is possible to use and would allow to have more audio input/output channels.
+### Design
+Our hardware framework allows to connect up to 8 analog control inputs (pots, lightsensors etc.), 8 digital control inputs (switches) and 8 LEDs. The current design uses a HAT (Hardware Attached on Top) audio interface, but any USB soundcard running with the Raspberry Pi is also possible to use. See [Build COSMO](/docs) for more details on the hardware design
 
 ![alt text](/images/COSMO-prototype1-pic2.jpg "basic COSMO designs")
 

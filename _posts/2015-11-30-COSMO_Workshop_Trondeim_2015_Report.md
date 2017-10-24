@@ -1,8 +1,8 @@
 ---
 layout: post
-title: COSMO Workshop in Trondheim
+title: Pictures from COSMO Workshop in Trondheim
 ---
-As guests in FIX Makerspace we were giving a COSMO Workshop in Trondheim from 29.-30. November 2015. 
+As guests in FIX Makerspace we were giving a COSMO Workshop in Trondheim from 29.-30. November 2015. Here are some pictures from the workshop
 
 ![cosmobox]({{ site.baseurl }}/images/WorkshopTrondheim2015/WorkshopTrondheim2015.jpg)
 

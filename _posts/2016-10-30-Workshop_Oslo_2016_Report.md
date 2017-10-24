@@ -1,6 +1,6 @@
 ---
 layout: post
-title: COSMO Workshop in Oslo
+title: Pictures from COSMO Workshop in Oslo
 ---
 It was so much fun to see all the COSMO Boxes develop in just two days. What a fantasic group of people to work with!
 
