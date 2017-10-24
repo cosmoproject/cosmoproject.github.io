@@ -6,4 +6,4 @@ As guests in FIX Makerspace we were giving a COSMO Workshop in Trondheim from 29
 
 ![cosmobox]({{ site.baseurl }}/images/WorkshopTrondheim2015/WorkshopTrondheim2015.jpg)
 
-![Beautiful coloured cable!] (/images/WorkshopTrondheim2015/RainbowCableClose.jpg)
+![Beautiful coloured cable!](/images/WorkshopTrondheim2015/RainbowCableClose.jpg)
