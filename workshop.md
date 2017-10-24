@@ -7,6 +7,10 @@ permalink: /workshop/
 ### Workshop description
 Currently the workshops are planned for a two-day (each 6 hours) schedule. This includes, designing the interface, soldering the components and learing to setting up the software.
 
+* [Pictures from workshop at FIX Makerspace in Trondheim November 2015](/COSMO_Workshop_Trondeim_2015_Report)
+* [Pictures from workshop at Bitraf in Oslo October 2016](/Workshop_Oslo_2016_Report)
+* [Pictures from workshop at BEK in Bergen November 2016](/Workshop_Bergen_2016_Report)
+
 ### Design
 Our hardware framework allows to connect up to 8 analog control inputs (pots, lightsensors etc.), 8 digital control inputs (switches) and 8 LEDs. The current design uses a HAT (Hardware Attached on Top) audio interface, but any USB soundcard running with the Raspberry Pi is also possible to use. See [Build COSMO](/docs) for more details on the hardware design
 
