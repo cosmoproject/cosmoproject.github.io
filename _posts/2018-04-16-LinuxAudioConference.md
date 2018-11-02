@@ -11,6 +11,8 @@ For this performance COSMO was inside the Tenor-Saxophone and running on a [Bela
 ![COSMO-Sax](/images/LAC2018.jpg)
 
 
-Here you can listen to an excerpt of the 12 minutes performance:
+Here you can listen to an excerpt of the 12 minutes performance by [Alex Hofmann](https://homepage.univie.ac.at/alex.hofmann/):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C_6mvbx8esQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+The full video can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
