@@ -41,24 +41,26 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 ### 1.1 List of supported audio effects:
 
 ## List of effects: 
-| UDO              | Arguments                                                                                                                                    |
-|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode]                                                                                                   |
-| Chorus.udo       | Feedback, Dry/wet mix                                                                                                                        |
-| Distortion.udo   | Level, Drive, Tone, Dry/wet mix                                                                                                              |
-| FakeGrainer.udo  | Dry/wet mix                                                                                                                                  |
-| Hack.udo         | Frequency, Dry/wet mix                                                                                                                       |
-| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode]                                                                                             |
-| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode]                                                                                             |
-| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only]                                                                                |
-| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode                                                                                                 |
-| Reverse.udo      | Reverse_time, Speed, Dry/wet mix                                                                                                             |
-| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix                                                                                       |
-| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode]                                                                                              |
-| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode]                                                                                                 |
+
+| Effect              | Arguments |
+| -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
+| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode] |
+| Chorus.udo       | Feedback, Dry/wet mix |
+| Distortion.udo   | Level, Drive, Tone, Dry/wet mix |
+| FakeGrainer.udo  | Dry/wet mix |
+| Hack.udo         | Frequency, Dry/wet mix |
+| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode] |
+| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode] |
+| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only] |
+| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode |
+| Reverse.udo      | Reverse_time, Speed, Dry/wet mix |
+| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix |
+| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode] |
+| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode] |
 | TriggerDelay.udo | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
-| Volume.udo       | Level                                                                                                                                        |
-| Wobble.udo       | Frequency, Dry/wet mix                                                                                                                       |
+| Volume.udo       | Level |
+| Wobble.udo       | Frequency, Dry/wet mix |
+
 
 <!--
 | Effect              | Arguments |
@@ -153,11 +155,6 @@ As the path indicates, the Csound files are placed in a separate folder which is
     - **```/Effects```**            
 
         A selection of basic (and some a bit more advanced) effects written in Csound as UDOs. Check out the file **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example of how to put these effect modules together.  
-<!--
-    - **```/Instruments```**
-
-        A few very basic instruments written in Csound as UDOs. Very much work in progress yet. Check out the file **```SimpleInstrumentSetup.csd```** in the **```/Examples```**-folder for an example of how to put these instrument modules together.  
--->
 
     - **```/Includes```**
 
