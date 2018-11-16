@@ -41,7 +41,7 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 ### 1.1 List of supported audio effects:
 
 ## List of effects: 
-| Effect              | Arguments |
+| UDO              | Arguments                                                                                                                                    |
 |:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
 | Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode]                                                                                                   |
 | Chorus.udo       | Feedback, Dry/wet mix                                                                                                                        |
@@ -58,7 +58,7 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 | Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode]                                                                                                 |
 | TriggerDelay.udo | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
 | Volume.udo       | Level                                                                                                                                        |
-| Wobble.udo       | Frequency, Dry/wet mix                      |
+| Wobble.udo       | Frequency, Dry/wet mix                                                                                                                       |
 
 <!--
 | Effect              | Arguments |
