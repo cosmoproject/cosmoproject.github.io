@@ -40,6 +40,9 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 ### 1.1 List of supported audio effects:
 
+{% include README.md url="https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/" %}
+
+
 
 
 | Effect              | Arguments |
