@@ -42,9 +42,6 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 <script src="https://gist.github.com/berntisak/70d0f23a09ba8af300474ec684f0d978.js"></script>
 
-<!--{% include README.md url="https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/" %} -->
-
-
 
 
 | Effect              | Arguments |
