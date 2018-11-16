@@ -40,10 +40,27 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 ### 1.1 List of supported audio effects:
 
-<script src="https://gist.github.com/berntisak/70d0f23a09ba8af300474ec684f0d978.js"></script>
+## List of effects: 
+| Effect              | Arguments |
+|:-----------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode]                                                                                                   |
+| Chorus.udo       | Feedback, Dry/wet mix                                                                                                                        |
+| Distortion.udo   | Level, Drive, Tone, Dry/wet mix                                                                                                              |
+| FakeGrainer.udo  | Dry/wet mix                                                                                                                                  |
+| Hack.udo         | Frequency, Dry/wet mix                                                                                                                       |
+| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode]                                                                                             |
+| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode]                                                                                             |
+| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only]                                                                                |
+| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode                                                                                                 |
+| Reverse.udo      | Reverse_time, Speed, Dry/wet mix                                                                                                             |
+| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix                                                                                       |
+| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode]                                                                                              |
+| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode]                                                                                                 |
+| TriggerDelay.udo | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
+| Volume.udo       | Level                                                                                                                                        |
+| Wobble.udo       | Frequency, Dry/wet mix                      |
 
-
-
+<!--
 | Effect              | Arguments |
 | -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
 | [AnalogDelay.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/AnalogDelay.udo)  | Delay time, Feedback, Dry/wet mix                                                                                                            |
@@ -66,13 +83,13 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 | [TriggerDelay.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/TriggerDelay.udo) | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
 | [Volume.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Volume.udo)       | Level                                                                                                                                        |
 | [Wobble.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Wobble.udo)       | Frequency, Dry/wet mix |
-
+-->
 
 ## 2. Basic Csound on COSMO
 
 This section will give you a quick overview of how to program your own basic Csound patches for the COSMO. If you already have experience in writing Csound patches, you can have a looke at one of our [examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
 
-On the COSMO box, we use a python script to handle both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **```cosmo.py```** and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. On our Raspbian image, this python file is called from the script **```startup.sh```**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **```csoundFile```** in **```startup.sh```** which has a string that points to a specific csd file:
+On the COSMO box, we use a python script to handle both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **```cosmo.py```** and resides within the [cosmo-fw](https://github.com/cosmoproject/cosmo-fw)-repository. On our Raspbian image, this python file is called from the script **```startup.sh```**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **```csoundFile```** in **```startup.sh```** which has a string that points to a specific csd file:
 
 ```
 
@@ -167,7 +184,7 @@ This line includes some utility code used by several of the effects and instrume
 #include "../DSP-Library/Effects/Lowpass.csd"
 ```
 
-Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the MultiDelay effect we would need to add the line **```#include "../DSP-Library/Effects/MultiDelay.csd"```**. 
+Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the TapeDelay effect we would need to add the line **```#include "../DSP-Library/Effects/TapeDelay.csd"```**. 
 
 **IMPORTANT!** The paths used in the example is based on the placement of the example files within the **```cosmo-dsp```** directory structure. If you want to modify this example instead of starting from scratch, see start of section [2. Basic Csound on COSMO](#2-basic-csound-on-cosmo) for explanation of how to make a local copy and do the necessesary modifications.
 
