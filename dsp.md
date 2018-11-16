@@ -142,35 +142,26 @@ As the path indicates, the Csound files are placed in a separate folder which is
 
     Some simple example files that show how to use the COSMO DSP library without using the [COSMO Patcher toolset](#1-cosmo-patcher).
 
-- **```/WorkshopTestFiles```**
+    - **```/WorkshopTestFiles```**
 
-    This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
+        This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
 
 - **```/DSP-Library```**
 
     We have tried to make a solution as simple as possible for those unfamiliar with Csound to be able to patch different effects and instruments together. All the effects and instruments are placed in separate files and embedded in something called a **UDO** (UDO stands for User Defined Opcode) with normalized input arguments (0-1) for the effect control parameters. Proper scaling are done inside the UDO and the actual parameter ranges can be found in the header of each effect and instrument file.   
 
-    - **```/Cabbage```**
-
-        A selection of the effects from the **```/Effects```**-folder reworked as Cabbage ([http://http://cabbageaudio.com/](http://cabbageaudio.com/)) plugins.
-
-
     - **```/Effects```**            
 
         A selection of basic (and some a bit more advanced) effects written in Csound as UDOs. Check out the file **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example of how to put these effect modules together.  
-
+<!--
     - **```/Instruments```**
 
         A few very basic instruments written in Csound as UDOs. Very much work in progress yet. Check out the file **```SimpleInstrumentSetup.csd```** in the **```/Examples```**-folder for an example of how to put these instrument modules together.  
-
+-->
 
     - **```/Includes```**
 
         Some files to be included in your Csound code to add support for MIDI input (**```all_midi_cc.inc```**), COSMO plank/HAT switches and leds (**```gpio_channels.inc```**) and COSMO plank/HAT pots (**```adc_channels.inc```**). Also a file (**```cosmo_utilities.inc```**) with some utility functions used by several effect UDOs, that needs to be included in your Csound orchestera (see **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example)
-
-    - **```/SoundFiles```**
-
-        Some sound files that can be used for e.g. granular synthesis, convolution 
 
 ### 2.2 **```SimpleEffectSetup.csd```** explained 
 
