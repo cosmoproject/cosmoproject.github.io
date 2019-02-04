@@ -40,8 +40,29 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 
 ### 1.1 List of supported audio effects:
 
+## List of effects: 
+
+| Effect              | Arguments |
+| -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
+| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode] |
+| Chorus.udo       | Feedback, Dry/wet mix |
+| Distortion.udo   | Level, Drive, Tone, Dry/wet mix |
+| FakeGrainer.udo  | Dry/wet mix |
+| Hack.udo         | Frequency, Dry/wet mix |
+| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode] |
+| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode] |
+| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only] |
+| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode |
+| Reverse.udo      | Reverse_time, Speed, Dry/wet mix |
+| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix |
+| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode] |
+| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode] |
+| TriggerDelay.udo | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
+| Volume.udo       | Level |
+| Wobble.udo       | Frequency, Dry/wet mix |
 
 
+<!--
 | Effect              | Arguments |
 | -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
 | [AnalogDelay.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/AnalogDelay.udo)  | Delay time, Feedback, Dry/wet mix                                                                                                            |
@@ -64,13 +85,13 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 | [TriggerDelay.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/TriggerDelay.udo) | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
 | [Volume.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Volume.udo)       | Level                                                                                                                                        |
 | [Wobble.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Wobble.udo)       | Frequency, Dry/wet mix |
-
+-->
 
 ## 2. Basic Csound on COSMO
 
 This section will give you a quick overview of how to program your own basic Csound patches for the COSMO. If you already have experience in writing Csound patches, you can have a looke at one of our [examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
 
-On the COSMO box, we use a python script to handle both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **```cosmo.py```** and resides within the [cosmohat-fw](https://github.com/cosmoproject/cosmohat-fw)-repository. On our Raspbian image, this python file is called from the script **```startup.sh```**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **```csoundFile```** in **```startup.sh```** which has a string that points to a specific csd file:
+On the COSMO box, we use a python script to handle both Csound and the data from the microcontroller (switches, leds and knobs). This script is called **```cosmo.py```** and resides within the [cosmo-fw](https://github.com/cosmoproject/cosmo-fw)-repository. On our Raspbian image, this python file is called from the script **```startup.sh```**, which runs when the COSMO boots, so this is where you change which Csound file (has the ending _.csd_) you want to use. To change the csd file, you need to change the variable called **```csoundFile```** in **```startup.sh```** which has a string that points to a specific csd file:
 
 ```
 
@@ -123,35 +144,21 @@ As the path indicates, the Csound files are placed in a separate folder which is
 
     Some simple example files that show how to use the COSMO DSP library without using the [COSMO Patcher toolset](#1-cosmo-patcher).
 
-- **```/WorkshopTestFiles```**
+    - **```/WorkshopTestFiles```**
 
-    This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
+        This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
 
 - **```/DSP-Library```**
 
     We have tried to make a solution as simple as possible for those unfamiliar with Csound to be able to patch different effects and instruments together. All the effects and instruments are placed in separate files and embedded in something called a **UDO** (UDO stands for User Defined Opcode) with normalized input arguments (0-1) for the effect control parameters. Proper scaling are done inside the UDO and the actual parameter ranges can be found in the header of each effect and instrument file.   
 
-    - **```/Cabbage```**
-
-        A selection of the effects from the **```/Effects```**-folder reworked as Cabbage ([http://http://cabbageaudio.com/](http://cabbageaudio.com/)) plugins.
-
-
     - **```/Effects```**            
 
         A selection of basic (and some a bit more advanced) effects written in Csound as UDOs. Check out the file **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example of how to put these effect modules together.  
 
-    - **```/Instruments```**
-
-        A few very basic instruments written in Csound as UDOs. Very much work in progress yet. Check out the file **```SimpleInstrumentSetup.csd```** in the **```/Examples```**-folder for an example of how to put these instrument modules together.  
-
-
     - **```/Includes```**
 
         Some files to be included in your Csound code to add support for MIDI input (**```all_midi_cc.inc```**), COSMO plank/HAT switches and leds (**```gpio_channels.inc```**) and COSMO plank/HAT pots (**```adc_channels.inc```**). Also a file (**```cosmo_utilities.inc```**) with some utility functions used by several effect UDOs, that needs to be included in your Csound orchestera (see **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example)
-
-    - **```/SoundFiles```**
-
-        Some sound files that can be used for e.g. granular synthesis, convolution 
 
 ### 2.2 **```SimpleEffectSetup.csd```** explained 
 
@@ -165,7 +172,7 @@ This line includes some utility code used by several of the effects and instrume
 #include "../DSP-Library/Effects/Lowpass.csd"
 ```
 
-Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the MultiDelay effect we would need to add the line **```#include "../DSP-Library/Effects/MultiDelay.csd"```**. 
+Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the TapeDelay effect we would need to add the line **```#include "../DSP-Library/Effects/TapeDelay.csd"```**. 
 
 **IMPORTANT!** The paths used in the example is based on the placement of the example files within the **```cosmo-dsp```** directory structure. If you want to modify this example instead of starting from scratch, see start of section [2. Basic Csound on COSMO](#2-basic-csound-on-cosmo) for explanation of how to make a local copy and do the necessesary modifications.
 
