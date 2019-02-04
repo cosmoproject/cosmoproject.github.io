@@ -75,10 +75,12 @@ endin
 ## Csound and Bela
 
 The idea to run Csound on the Bela Board came from the [COSMO-project](http://cosmoproject.github.io/) (Csound On Stage: Music Operator), which is a project devoted to making hardware- and software frameworks for making embedded standalone Csound instruments to use on stage. The COSMO team originally worked with Raspberry-Pi's but that always required some custom hardware, for better sound quality, adequate latency, and individual controller inputs. All these hardware requirements are already met by the Bela boards, so it was only a matter to bring Csound into the Bela platform.
-A small team around Bernt I. Waerstad, Victor Lazzarini and [Alex Hofmann](https://homepage.univie.ac.at/alex.hofmann/) started to work on this project in Autumn 2017 and the first release of BelaCsound was pubished in July 2018.
+A small team around [Bernt Isak Wærstad](http://berntisak.no), Victor Lazzarini and [Alex Hofmann](https://homepage.univie.ac.at/alex.hofmann/) started to work on this project in Autumn 2017 and the first release of BelaCsound was pubished in July 2018.
+
 
 <iframe src="https://player.vimeo.com/video/183101272" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/183101272">COSMO - Csound On Stage Music Operator</a>
+
 
 
 ### Getting started
@@ -86,10 +88,6 @@ A small team around Bernt I. Waerstad, Victor Lazzarini and [Alex Hofmann](https
 Bela comes with a very nice browser based IDE (see [https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela](https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela) for an introduction on how to install necessary drivers and accessing the IDE) which makes developing and setting up a Bela with Csound extremely easy. To get started, you simply click "Create new project", select ```Csound``` as project type and type in your desired name for the project. This will automatically create a default example project which introduces some key concepts like how to read in values from the analog pins and how to turn an LED on and off. Other and more advanced concepts can be explored in the Examples section under ```Csound```
 
 TODO: Put in screenshot of IDE creating a new project
-
-
-I've never used this - is it relevant?
-- from commandline > belacsound --csd xyz.csd
 
 ### Bela inputs and outputs in Csound
 
@@ -135,42 +133,50 @@ To communicate with the analog channels on the Bela, we're using the Csound chan
 	endin
 
 
-### What is easy to accomplish with Csound ?
+### Some examples of using Csound on Bela
 
 #### Effect processor using COSMO dsp-library
 
-The cosmo-dsp repository comprises a library of ready-made audio effects (e.g Reverb, Delay, Distortion ..). All effects are set up as independendant modules that can be combined to a custom setup of effects. To use one of the readymade effects, you first need to include the file containing the effect like this
+The [cosmo-dsp repository](http://github.com/cosmoproject/cosmo-dsp) comprises a library of ready-made audio effects (e.g Reverb, Delay, Distortion, Filters etc.). All effects are set up as independendant modules that can be combined to a custom setup of effects. To make it as much plug and play as possible, all arguments are also normalized (0-1) and scaled properly inside the effect so that the user can start playing as fast as possible
+
+To use one of the readymade effects, you first need to download the file containing the desired effect, place it with your csd file and include it using ```#include``` like this:
+
+	#include "Reverb.udo"
+
+The name and a quick explanation of the arguments can be found in the header of the ```Reverb.udo``` file. Since they're normalized, we can just use the analogIns directly to control the paramters of the effect. Here is a complete example of a Reverb effect where the dry/wet mix is controlled by a potentiometer connected to the first analog in 
+
+	<CsoundSynthesizer>
+	<CsOptions>
+	-m0d
+	</CsOptions>
+	<CsInstruments>
+	ksmps  	= 16
+	0dbfs	= 1
+	nchnls 	= 2
 
 	#include "../DSP-Library/Effects/Reverb.udo"
-	#include "../DSP-Library/Effects/Lowpass.udo"
 
-Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the TapeDelay effect we would need to add the line #include "../DSP-Library/Effects/TapeDelay.csd".
+	instr 1 
+		aL, aR ins
 
-IMPORTANT! The paths used in the example is based on the placement of the example files within the cosmo-dsp directory structure. If you want to modify this example instead of starting from scratch, see start of section 2. Basic Csound on COSMO for explanation of how to make a local copy and do the necessesary modifications.
+		aPot0 chnget "analogIn0"
+		kMix = k(aPot0)
 
-instr 1 
-    #include "../DSP-Library/Includes/adc_channels.inc"
-    #include "../DSP-Library/Includes/gpio_channels.inc"
-The two first files includes the code for reading the knobs, switches and leds. The values from these are put into global control rate variables called gkpotX, gkswitchX and gkledX accordingly (the X represents the number (0-indexed) of the controller, so the first knob would get the name gkpot0
+		; Reverb arguments: decay, cutoff, mix
+		aL, aR Reverb aL, aR, 0.9, 0.5, kMix 
 
-aL, aR ins
-This is the code for getting audio into Csound. ins is a Csound opcode (a native Csound module) which ouputs the incoming audio into the audio rate variables aL and aR
-
-; Reverb arguments: decay, cutoff, mix
-aL, aR Reverb aL, aR, gkpot0, gkpot1, gkswitch0
-
-Reverb is a UDO (User Defined Opcode) which takes a stereo input signal with 3 arguments (decay, cutoff and mix) and applies reverberation to the signal. The ouput is also a stereo signal. Notice that aL and aR are used on both right and left side of Reverb; this means that we first send the dry signal into the reverb effect and then overwrite the dry signal with the reverberant signal. This way makes it very easy to switch the order of effects without changing any code - you simply just reorder by switching lines.
-
-The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1).
-
-; Lowpass_Stereo arguments: cutoff, resonance
-aL, aR Lowpass_Stereo aL, aR, gkpot2, gkpot3
-Here a stereo lowpass filter is applied to the signal coming out from the reverb effect. Knob 3 and 4 are set up to control the filter cutoff and resonance respectively. The lowpass filter also have a distortion argument which we don’t use here. All effects are made in this way so actually all arguments are optional, but only in the order they are placed (e.g. you can’t skip resonance and then include distortion).
-
-outs aL, aR
-The audio coming out from the lowpass filter are sent to the outs opcode which sends the audio to the actual hardware device (sound card).
+		outs aL, aR
+	endin
 
 
+	</CsInstruments>
+	<CsScore>
+	i1 0 86400
+	</CsScore>
+	</CsoundSynthesizer>
+
+
+The same approach applies to any of the other effects found at [https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) and you can combine them in any order.
 
 #### MIDI controlled synthesizer
 
@@ -237,6 +243,7 @@ endin
 
 Programming for real-time systems requires a few considerations that you normally don't have to think about. First of all, prints should always be avoided unless you're debugging. In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators. Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
 
+
 TODO: put in examples code for loading audio to ftable
 
 
@@ -245,12 +252,14 @@ TODO: put in examples code for loading audio to ftable
 - Scopes: for now only scope channel is implemented
 - More examples: we aim to develop more interesting examples of how to use Csound on Bela in the future
 
-#### Projects made with COSMO (Bela + Csound)
+#### Projects made with Csound and Bela 
 
-##### Alex saxophone
+##### Alex saxophone (COSMO)
 
-##### Electroacoustic guitar
+##### Electroacoustic guitar (COSMO)
 
-##### 
+##### Sound platforms for Oslo Philaharmonic kid's day
+
+##### Syngebela (wireless COSMO)
 
 
