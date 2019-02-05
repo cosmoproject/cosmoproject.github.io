@@ -77,10 +77,12 @@ endin
 The idea to run Csound on the Bela Board came from the [COSMO-project](http://cosmoproject.github.io/) (Csound On Stage: Music Operator), which is a project devoted to making hardware- and software frameworks for making embedded standalone Csound instruments to use on stage. The COSMO team originally worked with Raspberry-Pi's but that always required some custom hardware, for better sound quality, adequate latency, and individual controller inputs. All these hardware requirements are already met by the Bela boards, so it was only a matter to bring Csound into the Bela platform.
 A small team around [Bernt Isak Wærstad](http://berntisak.no), Victor Lazzarini and [Alex Hofmann](https://homepage.univie.ac.at/alex.hofmann/) started to work on this project in Autumn 2017 and the first release of BelaCsound was pubished in July 2018.
 
+<p align="center">
 
-<iframe src="https://player.vimeo.com/video/183101272" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/183101272">COSMO - Csound On Stage Music Operator</a>
+[![COSMO - Csound On Stage Music Operator](images/COSMO-Vimeo.png)](https://vimeo.com/183101272 "COSMO - Csound On Stage Music Operator")
+[COSMO - Csound On Stage Music Operator](https://vimeo.com/183101272)
 
+</p>
 
 
 ### Getting started
