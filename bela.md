@@ -182,9 +182,9 @@ The same approach applies to any of the other effects found at [https://github.c
 
 #### MIDI controlled synthesizer
 
-a) One thing where, in my opinion, Csound outperforms other environments is how quick you can write a MIDI synthesizer. This comes in very handy in combination with Bela, as you can connect any class-compliant MIDI-keyboard to the USB-port of Bela, load a Csound instrument and play it like a synth.
+One thing where Csound, arguably, outperforms other environments is how quick you can write a MIDI synthesizer. This comes in very handy in combination with Bela, as you can connect any class-compliant MIDI-keyboard to the USB-port of Bela, load a Csound instrument and play it like a synth.
 
-In the Csound Options, you can select the MIDI-device you'd like to control csound with. As a default, the MIDI channel defines the instrument number which is called for each pressed key, this could be changed by setting [massign](https://csound.com/docs/manual/massign.html).
+In ```<CsOptions>```, you can select the MIDI-device you'd like to control Csound with. As a default, the MIDI channel defines the instrument number which is called for each pressed key, this could be changed by setting [massign](https://csound.com/docs/manual/massign.html).
 To avoid cpu overload by triggering too many voices in parallel, the [maxalloc](https://csound.com/docs/manual/maxalloc.html) option allows to restrict the maximum number of voices (in this example set to 4 voices).
 
 ```
