@@ -244,8 +244,10 @@ endin
 
 #### Projects made with Csound and Bela 
 
-##### Alex saxophone (COSMO)
-Based on the effects collection in the COSMO library, Alex built a  Tenor-Saxophone with integrated Live-Electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by sampling parts of this playing. The structure of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also played back to the audience. Furthermore, this setup allows the performer to move freely on stage, as all live-electronics is inside the saxophone. A full version of a performance with this augmented Tenor-Saxophone at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
+##### Augmented Tenor-Saxophone (COSMO)
+Based on the effects collection in the COSMO library, [Alex](https://homepage.univie.ac.at/alex.hofmann/) built a Tenor-Saxophone with integrated live-electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular 5V-phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by live-sampling and playback. 
+
+The structure of the saxophone part of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also hearabel for the audience. Furthermore, this setup allows the performer to move freely on stage or even walk into the audience, as all live-electronic parts are inside the saxophone. A full version of a 12 minute performance with this augmented Tenor-Saxophone at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
 
 Embedd either Video:
 
@@ -261,7 +263,7 @@ This video shows short summary of a performance with the augmented Tenor-Saxopho
 https://homepage.univie.ac.at/alex.hofmann/myprojects/pics/cosmo/sax_cosmo.jpg
 
 
-Figure shows an augmented Tenor-Saxophone setup, with Bela running Csound, an active speaker, a microphone and a 5V power-bank mounted inside the bell of the instrument.
+This figure shows an augmented Tenor-Saxophone setup, with Bela running Csound, an active speaker, a microphone and a 5V power-bank mounted inside the bell of the instrument.
 
 
 
