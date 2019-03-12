@@ -250,10 +250,17 @@ Based on the effects collection in the COSMO library, Alex built a  Tenor-Saxoph
 Embedd either Video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C_6mvbx8esQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 This video shows short summary of a performance with the augmented Tenor-Saxophone at the Linux Audio Conference 2018.
 
-or Image:
+
+..or Image:
+
+
 https://homepage.univie.ac.at/alex.hofmann/myprojects/pics/cosmo/sax_cosmo.jpg
+
+
 Figure shows an augmented Tenor-Saxophone setup, with Bela running Csound, an active speaker, a microphone and a 5V power-bank mounted inside the bell of the instrument.
 
 
