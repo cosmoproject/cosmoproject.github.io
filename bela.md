@@ -136,13 +136,13 @@ To communicate with the analog channels on the Bela, we're using the Csound chan
 
 #### Building a simple effect processor using the COSMO dsp-library
 
-The [cosmo-dsp repository](http://github.com/cosmoproject/cosmo-dsp) comprises a library of ready-made audio effects (e.g Reverb, Delay, Distortion, Filters etc.). All effects are set up as independendant modules that can be combined to a custom setup of effects. To make it as much plug and play as possible, all arguments are also normalized (0-1) and scaled properly inside the effect so that the user can start playing as fast as possible
+The [cosmo-dsp repository](http://github.com/cosmoproject/cosmo-dsp) comprises a library of ready-made audio effects (e.g Reverb, Delay, Distortion, Filters etc.). All effects are set up as independendant modules that can be combined to a custom setup of effects. To make it as much plug and play as possible, all arguments are also normalized (0-1) and scaled properly inside the effect so that the user can use them immediately.
 
 To use one of the readymade effects, you first need to download the file containing the desired effect, place it with your csd file and include it using ```#include``` like this:
 
 	#include "Reverb.udo"
 
-The name and a quick explanation of the arguments can be found in the header of the ```Reverb.udo``` file. Since they're normalized, we can just use the analogIns directly to control the paramters of the effect. Here is a complete example of a Reverb effect where the dry/wet mix is controlled by a potentiometer connected to the first analog in 
+The name and a quick explanation of the arguments can be found in the header of each ```.udo``` file in the COSMO dsp-library (e.g. [```Reverb.udo``` ](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Reverb.udo)). Since all arguments are normalized, we can directly use the analogIn values to control the paramters of the effect. Here is a complete example of a Reverb effect where the dry/wet mix is controlled by a potentiometer connected to the first analog in of the Bela-board.
 
 	<CsoundSynthesizer>
 	<CsOptions>
@@ -177,7 +177,7 @@ The name and a quick explanation of the arguments can be found in the header of 
 
 The same approach applies to any of the other effects found at [https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) and you can combine them in any order.
 
-#### MIDI controlled synthesizer
+#### Building a MIDI controlled synthesizer
 
 One thing where Csound, arguably, outperforms other environments is how quick you can write a MIDI synthesizer. This comes in very handy in combination with Bela, as you can connect any class-compliant MIDI-keyboard to the USB-port of Bela, load a Csound instrument and play it like a synth.
 
@@ -240,20 +240,15 @@ endin
 
 ### Good programming practices for Bela
 
-Programming for real-time systems requires a few considerations that you normally don't have to think about. First of all, prints should always be avoided unless you're debugging. In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators. Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
-
-
-TODO: put in examples code for loading audio to ftable
-
-
-### What's next?
-
-- Scopes: for now only scope channel is implemented
-- More examples: we aim to develop more interesting examples of how to use Csound on Bela in the future
+ In a real-time audio system like Bela, accessing other hardware than the audio device (eg. printing to console, reading writing to harddisk etc..) should be avoided (although it is sometimes required during debugging). In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators. Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
 
 #### Projects made with Csound and Bela 
 
 ##### Alex saxophone (COSMO)
+Based on the effects collection in the COSMO library, Alex built a  Tenor-Saxophone with integrated Live-Electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by sampling parts of this playing. The structure of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also played back to the audience. Furthermore, this setup allows the performer to move freely on stage, as all live-electronics is inside the saxophone. A full version of a performance at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C_6mvbx8esQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ##### Electroacoustic guitar (COSMO)
 
