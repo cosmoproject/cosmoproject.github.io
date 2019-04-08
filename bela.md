@@ -145,7 +145,7 @@ To communicate with the analog channels on the Bela, we're using the Csound chan
 		
 	endin
 
-#### Building a simple effect processor using the COSMO dsp-library
+### Building a simple effect processor using the COSMO dsp-library
 
 The [cosmo-dsp repository](http://github.com/cosmoproject/cosmo-dsp) comprises a library of ready-made audio effects (e.g Reverb, Delay, Distortion, Filters etc.). All effects are set up as independendant modules that can be combined to a custom setup of effects. To make it as much plug and play as possible, all arguments are also normalized (0-1) and scaled properly inside the effect so that the user can use them immediately.
 
@@ -188,7 +188,7 @@ The name and a quick explanation of the arguments can be found in the header of 
 
 The same approach applies to any of the other effects found at [https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) and you can combine them in any order.
 
-#### Building a MIDI controlled synthesizer
+### Building a MIDI controlled synthesizer
 
 One thing where Csound, arguably, outperforms other environments is how quick you can write a MIDI synthesizer. This comes in very handy in combination with Bela, as you can connect any class-compliant MIDI-keyboard to the USB-port of Bela, load a Csound instrument and play it like a synth.
 
@@ -249,9 +249,29 @@ endin
 </CsoundSynthesizer>
 ```
 
-### Good programming practices for Bela
+### Good programming practices for Csound on Bela
 
- In a real-time audio system like Bela, accessing other hardware than the audio device (eg. printing to console, reading writing to harddisk etc..) should be avoided (although it is sometimes required during debugging). In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators. Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
+ In a real-time audio system like Bela, accessing other hardware than the audio device (eg. printing to console, reading writing to harddisk etc.) should be avoided (although it is sometimes required during debugging). In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators (see examples below). Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
+
+Example of how to load and playback a file from memory using function table and the ```loscil``` opcode (see [https://csound.com/docs/manual/loscil.html](https://csound.com/docs/manual/loscil.html) for a thorough explanation) 
+ ```
+;------------------------------------------------------
+;	Playback of a stereo sound file (looping)
+;------------------------------------------------------
+
+instr 1
+	iftable = 1
+	asigL, asigR loscil .8, 1, iftable, 1, 1
+
+    outs asigL, asigR
+endin
+
+</CsInstruments>
+<CsScore>
+i1 0 86400
+f1 0 0 1 "soundfile.wav" 0 0 0
+</CsScore>
+```
 
 ## Projects made with Csound and Bela 
 
@@ -260,34 +280,28 @@ Based on the effects collection in the COSMO library, [Alex](https://homepage.un
 
 The structure of the saxophone part of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also hearabel for the audience. Furthermore, this setup allows the performer to move freely on stage or even walk into the audience, as all live-electronic parts are inside the saxophone. A full version of a 12 minute performance with this augmented Tenor-Saxophone at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
 
-
-This video shows short summary of a performance with the augmented Tenor-Saxophone at the Linux Audio Conference 2018.
-
-[![Augmented Tenor-Saxophone](images/Projects/augmented_sax_youtube.png)](https://www.youtube.com/watch?v=C_6mvbx8esQ "Augmented Tenor-Saxophone")
-
-[Augmented Tenor-Saxophone](https://www.youtube.com/watch?v=C_6mvbx8esQ)
-
 This figure shows an augmented Tenor-Saxophone setup, with Bela running Csound, an active speaker, a microphone and a 5V power-bank mounted inside the bell of the instrument.
 
 ![Augmented Tenor-Saxophone](images/Projects/augmented_sax_cosmo.jpg)
 
+A video with excerpts from a performance with the augmented Tenor-Saxophone at the Linux Audio Conference 2018:
+
+[![Augmented Tenor-Saxophone](images/Projects/augmented_sax_youtube.png)](https://www.youtube.com/watch?v=C_6mvbx8esQ "Augmented Tenor-Saxophone")
+
 ### Trampeklang
+
+**Trampeklang** is an interactive sound installation for kids commisioned by Oslo Philharmonic Orchestra. It was designed and built by Bernt Isak Wærstad and Peter Baden using custom built wooden platforms with velostat material for pressure sensing and Csound for triggering and playback of different sounds (from a sound back chosen by the operator). Everything connected to and running on a Bela of course. 
 
 ![Trampeklang](images/Projects/Trampeklang_InUse.jpg)
 
-Sound platforms for Oslo Philaharmonic kid's day
 
-
-<p align="center">
+A short video showing **Trampeklang** in use during Oslo Philaharmonic kid's day:
 
 [![Trampeklang](images/Projects/Trampeklang-Vimeo.png)](https://vimeo.com/325674591 "Trampeklang")
-[Trampeklang](https://vimeo.com/325674591)
 
-</p>
 
 ### Electroacoustic guitar (COSMO)
 
-
-### Syngebela (wireless COSMO)
+### Alex's NIME project
 
 
