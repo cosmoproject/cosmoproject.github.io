@@ -242,36 +242,41 @@ endin
 
  In a real-time audio system like Bela, accessing other hardware than the audio device (eg. printing to console, reading writing to harddisk etc..) should be avoided (although it is sometimes required during debugging). In Csound printing and other console messages can be suppressed by adding ```-m0d``` to the ```<CsOptions>``` section. Loading files from disk should also be avoided (for instance loading audio files with ```diskin2```), but should rather be loaded into memory with function table generators. Using ```reinit``` to re-initialize i-rate variables should also be avoided if possible as it can cause a mode switch which normally leads to a drop-out. 
 
-#### Projects made with Csound and Bela 
+## Projects made with Csound and Bela 
 
-##### Augmented Tenor-Saxophone (COSMO)
+### Augmented Tenor-Saxophone (COSMO)
 Based on the effects collection in the COSMO library, [Alex](https://homepage.univie.ac.at/alex.hofmann/) built a Tenor-Saxophone with integrated live-electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular 5V-phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by live-sampling and playback. 
 
 The structure of the saxophone part of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also hearabel for the audience. Furthermore, this setup allows the performer to move freely on stage or even walk into the audience, as all live-electronic parts are inside the saxophone. A full version of a 12 minute performance with this augmented Tenor-Saxophone at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
 
-Embedd either Video:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C_6mvbx8esQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 This video shows short summary of a performance with the augmented Tenor-Saxophone at the Linux Audio Conference 2018.
 
+[![Augmented Tenor-Saxophone](images/Projects/augmented_sax_youtube.png)](https://www.youtube.com/watch?v=C_6mvbx8esQ "Augmented Tenor-Saxophone")
 
-..or Image:
-
-
-https://homepage.univie.ac.at/alex.hofmann/myprojects/pics/cosmo/sax_cosmo.jpg
-
+[Augmented Tenor-Saxophone](https://www.youtube.com/watch?v=C_6mvbx8esQ)
 
 This figure shows an augmented Tenor-Saxophone setup, with Bela running Csound, an active speaker, a microphone and a 5V power-bank mounted inside the bell of the instrument.
 
+![Augmented Tenor-Saxophone](images/Projects/augmented_sax_cosmo.jpg)
+
+### Trampeklang
+
+![Trampeklang](images/Projects/Trampeklang_InUse.jpg)
+
+Sound platforms for Oslo Philaharmonic kid's day
 
 
+<p align="center">
 
-##### Electroacoustic guitar (COSMO)
+[![Trampeklang](images/Projects/Trampeklang-Vimeo.png)](https://vimeo.com/325674591 "Trampeklang")
+[Trampeklang](https://vimeo.com/325674591)
 
-##### Sound platforms for Oslo Philaharmonic kid's day
+</p>
 
-##### Syngebela (wireless COSMO)
+### Electroacoustic guitar (COSMO)
+
+
+### Syngebela (wireless COSMO)
 
 
