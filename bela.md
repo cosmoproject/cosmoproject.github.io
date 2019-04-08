@@ -276,7 +276,7 @@ f1 0 0 1 "soundfile.wav" 0 0 0
 ## Projects made with Csound and Bela 
 
 ### Augmented Tenor-Saxophone (COSMO)
-Based on the effects collection in the COSMO library, [Alex](https://homepage.univie.ac.at/alex.hofmann/) built a Tenor-Saxophone with integrated live-electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular 5V-phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by live-sampling and playback. 
+Based on the effects collection in the COSMO library, [Alex Hofmann](https://homepage.univie.ac.at/alex.hofmann/) built a Tenor-Saxophone with integrated live-electronics. Inside the bell of the instrument he mounted a Bela board, with speaker and microphone, all powered by a regular 5V-phone charger power-bank. On the Bela board, a Csound-Patch is running that processes his playing in realtime, either by adding modulation effects or by live-sampling and playback. 
 
 The structure of the saxophone part of the 12 minute performance was chosen by an algorithm, which randlomly picks voice samples with instructions out of three categories (tempo, dynamics, tonal material). Verbal instructions such as "Fast, loud, three tones!" give cues to the player but are also hearabel for the audience. Furthermore, this setup allows the performer to move freely on stage or even walk into the audience, as all live-electronic parts are inside the saxophone. A full version of a 12 minute performance with this augmented Tenor-Saxophone at the Linux Audio Conference 2018 can be found [here](https://homepage.univie.ac.at/alex.hofmann/general/2018/10/29/LAC2018_VID.html).
 
@@ -301,6 +301,22 @@ A short video showing **Trampeklang** in use during Oslo Philaharmonic kid's day
 
 
 ### Electroacoustic guitar (COSMO)
+
+<img src="images/NIME2018/performance_preparations.jpg" align="left" HSPACE=10>
+
+
+Bernt Isak Wærstad are using DIY electronics and custom processing software written in Csound ([COSMO](http://cosmoproject.github.com)) morphed with an acoustic guitar to create a new electroacoustic instrument. Extending the traditional instrument and exploring the cross-sections between electronic and acoustic timbres. The instrument was first used for a concert at the MultiNO festival in Oslo in January 2018 and have later been presented through a performance at the [NIME conference at Virginia Tech in June 2018](http://nime2018.icat.vt.edu).
+
+[INSERT VIDEO HERE!!!]
+
+
+
+<br><br><br>
+
+
+[Recording of Electroacoustic Guitar from MultiNO on Soundcloud](https://soundcloud.com/mrbernts/electroacoustic-guitar-at-multino-2018)
+
+[![Electroacoustic Guitar ](images/Projects/ElectroAcousticGuitar-Soundcloud.png)](https://soundcloud.com/mrbernts/electroacoustic-guitar-at-multino-2018 "Trampeklang")
 
 ### Alex's NIME project
 
