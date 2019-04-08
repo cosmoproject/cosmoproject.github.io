@@ -89,7 +89,18 @@ A small team, namely [Bernt Isak Wærstad](http://berntisak.no), [Victor Lazzari
 
 ### Getting started
 
-Bela comes with a very nice browser based IDE (see [https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela](https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela) for an introduction on how to install necessary drivers and accessing the IDE) which makes developing and setting up a Bela with Csound extremely easy. With the [IDE](https://github.com/BelaPlatform/Bela/wiki/Bela-IDE) opened, you simply click "Create new project", select ```Csound``` as project type and type in your desired name for the project. This will automatically create a default example project which introduces some key concepts like how to read in values from the analog pins and how to turn an LED on and off. Other and more advanced concepts can be explored in the Examples section under ```Csound```
+<img src="images/BelaIDE-NewProject.png" width=250px align=left HSPACE=15> 
+
+Bela comes with a very nice browser based IDE which makes developing and setting up a Bela with Csound extremely easy. To get started, you simply click "Create new project", select ```Csound``` as project type and type in your desired name for the project. 
+
+This will automatically create a default example project which introduces some key concepts like how to read in values from the analog pins and how to turn an LED on and off. Other and more advanced concepts can be explored in the Examples section under ```Csound```
+
+See [https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela](https://github.com/BelaPlatform/Bela/wiki/Getting-started-with-Bela) for an introduction on how to install necessary drivers and accessing the IDE
+
+![Bela IDE with the Csound template project loaded](images/BelaIDE-Csound.png)
+
+<center>Bela IDE with the Csound template project loaded</center>
+
 
 ### Bela inputs and outputs in Csound
 
