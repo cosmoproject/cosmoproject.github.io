@@ -323,7 +323,7 @@ Bernt Isak Wærstad are using DIY electronics and custom processing software wri
 The Half-Physler is a hybrid acoustic-virtual instrument. A physical model of a tube is running on the Bela Mini, whereas a clarinet reed with a bending sensor together with an actuator is used as the excitation mechanism similar to real single-reed instruments. The performer can control the coupling between the reed and the virtual tube by pressing the reed against the shaker. A slider and 6 potentiometers allow to shape the tube-resonator in a way it would not be possible with real acoustic instruments, such as morphing a cylinder into a cone.
 
 
-[![The Half-Physler](images/Projects/augmented_sax_youtube.png)](https://youtu.be/2ICv0E9Czmc "The Half-Physler")
+[![The Half-Physler](images/Projects/Youtube_Half-Physler.png)](https://youtu.be/2ICv0E9Czmc "The Half-Physler")
 
 
 
