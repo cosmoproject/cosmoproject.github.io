@@ -318,6 +318,14 @@ Bernt Isak Wærstad are using DIY electronics and custom processing software wri
 
 [![Electroacoustic Guitar ](images/Projects/ElectroAcousticGuitar-Soundcloud.png)](https://soundcloud.com/mrbernts/electroacoustic-guitar-at-multino-2018 "Trampeklang")
 
-### Alex's NIME project
+### The Half-Physler
+
+The Half-Physler is a hybrid acoustic-virtual instrument. A physical model of a tube resonator is running on the Bela Mini, whereas a clarinet reed with a bending sensor together with an actuator is used as the excitation mechanism similar to real single-reed instruments. The physical model is provided as an [opcode for Csound](https://github.com/ketchupok/half-physler). The performer can control the coupling between the reed and the virtual tube by pressing the reed against the shaker. A slider and potentiometers on the 3D printed enclosure allow to shape the tube-resonator in a way beyond the possibilities with real acoustic instruments, such as morphing a cylinder into a cone.
+
+The Half-Physler was developed at the [Department of Music Acoustics at the University of Music and Performing Arts Vienna](https://iwk.mdw.ac.at/ar-pilot) were you can find more information about the project.
+
+
+[![The Half-Physler](images/Projects/Youtube_Half-Physler.png)](https://youtu.be/2ICv0E9Czmc "The Half-Physler")
+
 
 
