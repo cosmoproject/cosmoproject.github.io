@@ -22,7 +22,7 @@ More instructions coming soon..
 
 COSMO is NOT a product, but an open source project devoted to make hardware- and software frameworks for making embedded standalone [Csound](https://csound.com) instruments to use on stage. The separate parts of the project can also be used individually - the cosmo-dsp library will for instance work on any platform the runs Csound (see [Program COSMO](/dsp) for more information). 
 
-This documentation page is mainly focused on building a COSMO using the Raspberry Pi and is mainly kept her for legacy reasons. The COSMO team are currently using the [Bela](http://bela.io) platform, since it's much better for real-time application, can do extremely low latency, have a much smaller and more intergrated hardware solution and a fantastic web-based IDE which makes the software development much smoother. 
+This documentation page is focused on building a COSMO using the Raspberry Pi and is mainly kept her for legacy reasons. The COSMO team are currently using the [Bela platform](http://bela.io), since it's much better for real-time application, can do extremely low latency, have a much smaller and more intergrated hardware solution and a fantastic web-based IDE which makes the software development much smoother. 
 
 
 * TOC
@@ -36,13 +36,13 @@ These instructions assume that you have the following hardware:
 2. Either a [Behringer UCA222 USB sound card](https://www.thomann.de/gb/behringer_ucontrol_uca_222.htm) or a [Cirrus Logic Audio Card](https://www.element14.com/community/community/raspberry-pi/raspberry-pi-accessories/cirrus_logic_audio_card) 
 3. One of our custom PCBs for controller input and output -  the [COSMO HAT](https://github.com/cosmoproject/cosmo-schematics/tree/master/hat) or the [COSMO Plank](https://github.com/cosmoproject/cosmo-schematics/tree/master/plank)
 
-The Cirrus Audio had given best results in both latency and audio quality, but is not compatible with the COSMO HAT.
+The Cirrus Audio had given best results in both latency and audio quality, but is not compatible with the [COSMO HAT](https://github.com/cosmoproject/cosmo-schematics/tree/master/hat).
 
 We also have a custom designed analog cross-mixer to blend between the dry and the processed signal, but this is optional for these instructions.
 
 **IMPORTANT NOTE!!!** 
 
-We do NOT produce or sell our custom hardware, but all the schematics are open source and you're free to print and assemble the PCBs on your own. Unfortunately we don't have time to do any support on this, so you'll have to figure it out on your own. If you don't have the time or the skill to do this, we can recommend using the [Bela](http://bela.io) platform instead
+We do NOT produce or sell our custom hardware, but all the schematics are open source and you're free to print and assemble the PCBs on your own. Unfortunately we don't have time to do any support on this, so you'll have to figure it out on your own. If you don't have the time or the skill to do this, we can recommend using the [Bela platform](http://bela.io) instead
 
 All the schematics can be found at [https://github.com/cosmoproject/cosmo-schematics](https://github.com/cosmoproject/cosmo-schematics)
 

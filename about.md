@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 
-The COSMO (Csound On Stage Musical Operator) project is an open source project devoted to make hardware- and software frameworks for making embedded standalone [Csound](https://csound.com) instruments to use on stage.  
+The COSMO (Csound On Stage Musical Operator) project is an open source project devoted to make hardware- and software frameworks for designing and building embedded standalone [Csound](https://csound.com) instruments to use on stage.  
 
 ![alt text](/images/Live_01.png "Live")
 
@@ -15,9 +15,9 @@ The COSMO (Csound On Stage Musical Operator) project is an open source project d
 
 Today Csound is developed by a group of core developers with a wider community of volunteers contributing. One of the main principles in Csound development is to guarantee backwards compatibility. You can still run Csound source files from 1986 on the latest Csound release.
 
-Although Csound has a strong tradition as a tool for composing electro-acoustic pieces and traditionally has been used in a non-interactive score driven context, nowadays it is mostly used in a real-time context. Csound can run on various different hardware and software platforms including all major operating systems as well as Android and iOS. Csound can also be called through other programming languages such as Python, Lua, C/C++, Java, etc., with the latest addition being being support for the [Bela](https://bela.io/) platform.
+Although Csound has a strong tradition as a tool for composing electro-acoustic pieces and traditionally has been used in a non-interactive score driven context, nowadays it is mostly used in a real-time context. Csound can run on various different hardware and software platforms including all major operating systems as well as Android and iOS. Csound can also be called through other programming languages such as Python, Lua, C/C++, Java, etc., with the latest addition being being support for the [Bela platform](https://bela.io/).
 
- The initial aim of the “Csound On Stage Music Operator” (COSMO) project was to bring the power of [Csound](https://csound.com) in a seamless and intergrated way. The first version of COSMO was in a classic guitar pedal stomp box design - with the tagline ```Csound on the pedal board``` - but has since expanded in several ways ranging from [table top effects unit](https://vimeo.com/183101272) to [embedded saxophone augmentation](https://www.youtube.com/watch?v=C_6mvbx8esQ). There's no definite COSMO design in terms of hardware and layout, which has also been a key point in our workshops where the participants have designed their own boxes.
+ The initial aim of the ***Csound On Stage Music Operator*** (COSMO) project was to bring the power of [Csound](https://csound.com) in a seamless and intergrated way. The first version of COSMO was in a classic guitar pedal stomp box design - with the tagline **Csound on the pedal board** - but has since expanded in several ways ranging from [table top effects unit](https://vimeo.com/183101272) to [embedded saxophone augmentation](https://www.youtube.com/watch?v=C_6mvbx8esQ). There's no definite COSMO design in terms of hardware and layout, which has also been a key point in our workshops where the participants have designed their own boxes.
 
 ![alt text](/images/3_COSMO_designs.JPG "3 different COSMO designs")
 
@@ -44,6 +44,8 @@ Former Members:
 ### Contact us
 
 [csoundonstage@gmail.com](mailto:csoundonstage@gmail.com)
+
+Facebook page: [https://www.facebook.com/cosmoproject/](https://www.facebook.com/cosmoproject/)
 
 The project is funded by the [Arts Council Norway](http://www.kulturradet.no/)
 
