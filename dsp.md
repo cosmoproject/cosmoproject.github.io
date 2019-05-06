@@ -8,39 +8,14 @@ A basic collection of DSP code for the COSMO can be found in this github reposit
 
 This repository comprises a library of ready-made [audio effects](https://github.com/cosmoproject/cosmo-dsp/tree/master/DSP-Library/Effects) (e.g Reverb, Delay, Distortion ..). All effects are set up as independendant modules that can be combined to a custom setup of effects. There are two ways of using this library to program your COSMO. You can either [program your own Csound patches](#BasicCsoundOnCOSMO) or use our toolset [COSMO Patcher](#COSMO-Patcher)
 
-
-If you have experience in writing Csound patches, you can take one of the [examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
+If you have experience in writing Csound patches, you can start with one of the [basic examples](https://github.com/cosmoproject/cosmo-dsp/tree/master/Examples) and modify them.
 
 **Table of contents**
 
 * TOC
 {:toc}
 
-
-## 1. COSMO Patcher
-
-A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning 'effect arguments' (see List of supported effect UDOs) to the harware controllers. A simple patch looks like this:
-
-    {"COSMO-Patch": {
-        "pot0":
-            {
-                "Reverb": "Decay time",
-                "Lowpass": "Cutoff frequency"
-            },
-        "pot1":
-            {
-                "Reverse": "Dry/wet mix"
-            }
-        }
-    }
-    
-From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). If you're using the COSMO image, you don't need to do the install part. 
-
-
-
-### 1.1 List of supported audio effects:
-
-## List of effects: 
+## 1. List of effects: 
 
 | Effect              | Arguments |
 | -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,6 +61,7 @@ From this structure, the 'JsonToCsd.py' converter can generate the according Cso
 | [Volume.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Volume.udo)       | Level                                                                                                                                        |
 | [Wobble.udo](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/Effects/Wobble.udo)       | Frequency, Dry/wet mix |
 -->
+
 
 ## 2. Basic Csound on COSMO
 
@@ -253,7 +229,27 @@ Lastly, the format of the variable names have now changed from **```gkpotX```**,
 aL, aR Lowpass_Stereo aL, aR, gkCHN1_CC1, gkCHN1_CC2
 ```  
 
+## 3. COSMO Patcher
+
+A better way to start building your effect instrument is using the [COSMO-Patcher](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). With this you can define your instrument by simply assigning 'effect arguments' (see List of supported effect UDOs) to the harware controllers. A simple patch looks like this:
+
+    {"COSMO-Patch": {
+        "pot0":
+            {
+                "Reverb": "Decay time",
+                "Lowpass": "Cutoff frequency"
+            },
+        "pot1":
+            {
+                "Reverse": "Dry/wet mix"
+            }
+        }
+    }
+    
+From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). If you're using the COSMO image, you don't need to do the install part. 
+
 ![alt text](/images/Live_01.png "Live-01")
+
 
 ## Contribute
 
