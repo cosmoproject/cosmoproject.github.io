@@ -12,4 +12,4 @@ Read the full blog post here:
 [https://blog.bela.io/2019/05/03/bela-learn-csound/](https://blog.bela.io/2019/05/03/bela-learn-csound/)
 
 
-[Bela COSMO](http://cosmoproject.github.io/images/NIME2018/performance_preparations.jpg)
+![Bela COSMO](http://cosmoproject.github.io/images/NIME2018/performance_preparations.jpg)
