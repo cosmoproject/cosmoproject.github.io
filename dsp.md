@@ -15,27 +15,33 @@ If you have experience in writing Csound patches, you can start with one of the 
 * TOC
 {:toc}
 
-## 1. List of effects: 
+## 1. List of effects:
 
 | Effect              | Arguments |
 | -----------------| :---------------------------------------------------------------------------------------------------------------------------------------------|
-| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode] |
-| Chorus.udo       | Feedback, Dry/wet mix |
-| Distortion.udo   | Level, Drive, Tone, Dry/wet mix |
-| FakeGrainer.udo  | Dry/wet mix |
-| Hack.udo         | Frequency, Dry/wet mix |
-| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode] |
-| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode] |
-| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only] |
-| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode |
-| Reverse.udo      | Reverse_time, Speed, Dry/wet mix |
-| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix |
-| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode] |
-| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode] |
+| Ampmod.udo       | ModOffset, ModFreq, ModFreqMulti, Mix [, mode, ModIndex, Feed, ModWave]                                                                      |
+| Blur.udo         | Blur time, Gain, Dry/wet mix[, StereoMode]                                                                                                   |
+| Chorus.udo       | Feedback, Dry/wet mix                                                                                                                        |
+| Distortion.udo   | Level, Drive, Tone, Dry/wet mix                                                                                                              |
+| FakeGrainer.udo  | Dry/wet mix                                                                                                                                  |
+| Hack.udo         | Frequency, Dry/wet mix                                                                                                                       |
+| Highpass.udo     | Cutoff_frequency, Resonance, Distortion [, Mode]                                                                                             |
+| Lowpass.udo      | Cutoff frequency, Resonance, Distortion [, Mode]                                                                                             |
+| MultiDelay.udo   | Multi tap on/off, Delay time, Feedback, Cutoff, Dry/wet mix                                                                                  |
+| Phaser.udo       | Rate, Resonance, Notches, Wave, Mix, Mode                                                                                                    |
+| RandDelay.udo    | Range, Speed, Feedback, Dry/wet mix, [Stereo Mode 1i/1o only]                                                                                |
+| Reverb.udo       | DecayTime, HighFreq_Cutoff, DryWet_Mix, Mode                                                                                                 |
+| Reverse.udo      | Reverse_time, Speed, Dry/wet mix                                                                                                             |
+| SSB.udo          | ModFreq, ModFreqMulti, Balance, Mix                                                                                                          |
+| SimpleLooper.udo | Record_Play, Play_Stop, Speed, Reverse, CrossFadeDur, Audio_Through, LoopStart, LoopEnd                                                      |
+| SineDelay.udo    | Range, Frequency, ModulationIdx, Feedback, Dry/wet mix                                                                                       |
+| TapeDelay.udo    | DelayTime, Feedback, Filter, Mix [, StereoMode]                                                                                              |
+| Tremolo.udo      | Frequency, Depth, Dry/wet mix [, StereoMode]                                                                                                 |
 | TriggerDelay.udo | Threshold, DelayTime Min, DelayTime Max, Feedback Min, Feedback Max, Width, Level, Portamento time, Cutoff frequency, Bandwidth, Dry/wet mix |
-| Volume.udo       | Level |
-| Wobble.udo       | Frequency, Dry/wet mix |
+| Volume.udo       | Level                                                                                                                                        |
+| Wobble.udo       | Frequency, Dry/wet mix                                                                                                                       |
 
+This is a snapshot of this [file](https://github.com/cosmoproject/cosmo-dsp/blob/master/DSP-Library/README.md).
 
 <!--
 | Effect              | Arguments |
@@ -82,12 +88,12 @@ The folder **```cosmo-dsp```** is a [git repository](https://en.wikipedia.org/wi
 **Tip!** *You can press the tab key to autocomplete folder and file names when typing in terminal*
 
 <a name="make-local-copy"></a>
-To make a new folder that can keep your own local Csound files, you can use these commands: 
+To make a new folder that can keep your own local Csound files, you can use these commands:
 
 ```
 $ cd /home/pi
 $ mkdir csound
-``` 
+```
 This will make a new folder called **```csound```**, but you can use any name you want by changing the argument after **```mkdir```**
 
 If you want to use one of the examples as a starting point, you can use these commands to make a local copy called **```MyEffectSetup.csd```**:
@@ -102,7 +108,7 @@ Since the include paths used in all the examples file are relative to their plac
 ```
 $ cd /home/pi/csound
 $ nano MyEffectSetup.csd
-``` 
+```
 Now replace all instances of **```../DSP-Library```** with **```../cosmo-dsp/DSP-Library```**
 
 Remember that you need to change the **```csoundFile```**-variable in **```startup.sh```** to point to **```/home/pi/csound/MyEffectSetup.csd```** to make this the Csound file that runs at startup.
@@ -122,7 +128,7 @@ As the path indicates, the Csound files are placed in a separate folder which is
 
     - **```/WorkshopTestFiles```**
 
-        This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies. 
+        This folder contains some simple test files to test audio in/out, switches, leds and knobs (file names are quite self explanatory). There is also a basic synthesizer example where you can use the switches to turn on and off different oscillators and use the knobs to control their individual frequencies.
 
 - **```/DSP-Library```**
 
@@ -136,7 +142,7 @@ As the path indicates, the Csound files are placed in a separate folder which is
 
         Some files to be included in your Csound code to add support for MIDI input (**```all_midi_cc.inc```**), COSMO plank/HAT switches and leds (**```gpio_channels.inc```**) and COSMO plank/HAT pots (**```adc_channels.inc```**). Also a file (**```cosmo_utilities.inc```**) with some utility functions used by several effect UDOs, that needs to be included in your Csound orchestera (see **```SimpleEffectSetup.csd```** in the **```/Examples```**-folder for an example)
 
-### 2.2 **```SimpleEffectSetup.csd```** explained 
+### 2.2 **```SimpleEffectSetup.csd```** explained
 
 ```
 #include "../DSP-Library/Includes/cosmo_utilities.inc"
@@ -148,17 +154,17 @@ This line includes some utility code used by several of the effects and instrume
 #include "../DSP-Library/Effects/Lowpass.csd"
 ```
 
-Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the TapeDelay effect we would need to add the line **```#include "../DSP-Library/Effects/TapeDelay.csd"```**. 
+Since the Csound code is placed in separate files, we need these lines to include the actual code for Reverb and Lowpass. If we wanted to use e.g. the TapeDelay effect we would need to add the line **```#include "../DSP-Library/Effects/TapeDelay.csd"```**.
 
 **IMPORTANT!** The paths used in the example is based on the placement of the example files within the **```cosmo-dsp```** directory structure. If you want to modify this example instead of starting from scratch, see start of section [2. Basic Csound on COSMO](#2-basic-csound-on-cosmo) for explanation of how to make a local copy and do the necessesary modifications.
 
 ```
-instr 1 
+instr 1
     #include "../DSP-Library/Includes/adc_channels.inc"
     #include "../DSP-Library/Includes/gpio_channels.inc"
 ```
 
-The two first files includes the code for reading the knobs, switches and leds. The values from these are put into global control rate variables called **gkpotX**, **gkswitchX** and **gkledX** accordingly (the X represents the number (0-indexed) of the controller, so the first knob would get the name **gkpot0** 
+The two first files includes the code for reading the knobs, switches and leds. The values from these are put into global control rate variables called **gkpotX**, **gkswitchX** and **gkledX** accordingly (the X represents the number (0-indexed) of the controller, so the first knob would get the name **gkpot0**
 
 ```
 aL, aR ins
@@ -175,25 +181,25 @@ aL, aR Reverb aL, aR, gkpot0, gkpot1, gkswitch0
 
 Reverb is a UDO (User Defined Opcode) which takes a stereo input signal with 3 arguments (decay, cutoff and mix) and applies reverberation to the signal. The ouput is also a stereo signal. Notice that **```aL```** and **```aR```** are used on both right and left side of **```Reverb```**; this means that we first send the dry signal into the reverb effect and then overwrite the dry signal with the reverberant signal. This way makes it very easy to switch the order of effects without changing any code - you simply just reorder by switching lines.
 
-The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1). 
-    
+The arguments are where set up how you use your knobs and switches to control the different effects. In this example the two first knobs will control the decay time and lowpass filter cutoff, while the first switch will turn the effect on and off (by sending 0 or 1 to the mix argument). All scaling are done inside the effects, so all input arguments should be normalized (0 to 1).
+
 ```
 ; Lowpass_Stereo arguments: cutoff, resonance
 aL, aR Lowpass_Stereo aL, aR, gkpot2, gkpot3
 ```
 
-Here a stereo lowpass filter is applied to the signal coming out from the reverb effect. Knob 3 and 4 are set up to control the filter cutoff and resonance respectively. The lowpass filter also have a distortion argument which we don't use here. All effects are made in this way so actually all arguments are optional, but only in the order they are placed (e.g. you can't skip resonance and then include distortion). 
+Here a stereo lowpass filter is applied to the signal coming out from the reverb effect. Knob 3 and 4 are set up to control the filter cutoff and resonance respectively. The lowpass filter also have a distortion argument which we don't use here. All effects are made in this way so actually all arguments are optional, but only in the order they are placed (e.g. you can't skip resonance and then include distortion).
 
 ```
 outs aL, aR
 ```
 The audio coming out from the lowpass filter are sent to the **outs** opcode which sends the audio to the actual hardware device (sound card).
 
-This example was made to be as simple and clear as possible. 
+This example was made to be as simple and clear as possible.
 
 <!--To see a bit more advanced example which illustrates how you can achieve more flexible routing like sending to different effects in parallell, see the files **ExampleSetup.csd**. -->
 
-A basic understanding of Csound is highly recommended before getting too experimental. The FLOSS manual is an excellent resource for learning Csound: 
+A basic understanding of Csound is highly recommended before getting too experimental. The FLOSS manual is an excellent resource for learning Csound:
 
 [http://floss.booktype.pro/csound/preface/](http://floss.booktype.pro/csound/preface/)
 
@@ -209,7 +215,7 @@ To make the **```SimpleEffectSetup.csd```** work with a MIDI-controller, a few c
 Secondly, you need to change the first lines in instrument 1 from this:
 
 ```
-instr 1 
+instr 1
     #include "../DSP-Library/Includes/adc_channels.inc"
     #include "../DSP-Library/Includes/gpio_channels.inc"
 ```
@@ -217,7 +223,7 @@ instr 1
 to this:
 
 ```
-instr 1 
+instr 1
     #include "../DSP-Library/Includes/all_midi_cc.inc"
 
 ```
@@ -245,8 +251,8 @@ A better way to start building your effect instrument is using the [COSMO-Patche
             }
         }
     }
-    
-From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). If you're using the COSMO image, you don't need to do the install part. 
+
+From this structure, the 'JsonToCsd.py' converter can generate the according Csound file. Find more instructions [here](https://github.com/cosmoproject/cosmo-dsp/tree/master/COSMO-Patcher). If you're using the COSMO image, you don't need to do the install part.
 
 ![alt text](/images/Live_01.png "Live-01")
 
